@@ -1,0 +1,20 @@
+
+plprec: Set precision in numeric labels 
+
+DESCRIPTION:
+
+    Sets the number of places after the decimal point in numeric labels. 
+
+SYNOPSIS:
+
+plprec(set, prec)
+
+ARGUMENTS:
+
+    set (PLINT, input) :    If set is equal to 0 then PLplot automatically
+    determines the number of places to use after the decimal point in
+    numeric labels (like those used to label axes).  If set is 1 then
+    prec sets the number of places. 
+
+    prec (PLINT, input) :    The number of characters to draw after the
+    decimal point in numeric labels. 

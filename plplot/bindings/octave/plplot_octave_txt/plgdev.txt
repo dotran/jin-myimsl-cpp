@@ -1,0 +1,16 @@
+
+plgdev: Get the current device (keyword) name 
+
+DESCRIPTION:
+
+    Get the current device (keyword) name.  Note: you
+    must have allocated
+    space for this (80 characters is safe). 
+
+SYNOPSIS:
+
+plgdev(p_dev)
+
+ARGUMENTS:
+
+    p_dev (char *, output) :    Pointer to device (keyword) name string. 

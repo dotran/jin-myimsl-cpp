@@ -1,0 +1,18 @@
+
+plssub: Set the number of subpages in x and y 
+
+DESCRIPTION:
+
+    Set the number of subpages in x and y. 
+
+SYNOPSIS:
+
+plssub(nx, ny)
+
+ARGUMENTS:
+
+    nx (PLINT, input) :    Number of windows in x direction (i.e., number
+    of window columns). 
+
+    ny (PLINT, input) :    Number of windows in y direction (i.e., number
+    of window rows). 

@@ -1,0 +1,31 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLBIN 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplbin\fP - Plot a histogram from binned data 
+.SH SYNOPSIS
+\fBplbin\fP(\fInbin\fP, \fIx\fP, \fIy\fP, \fIcenter\fP)
+.SH DESCRIPTION
+
+.P
+Plots a histogram consisting of \fInbin\fP bins.  The value associated with the i'th bin is placed in \fIx\fP[i], and the number of points in the bin is placed in \fIy\fP[i].  For proper operation, the values in \fIx\fP[i] must form a strictly increasing sequence.  If \fIcenter\fP=0, \fIx\fP[i] is the left-hand edge of the i'th bin, and if \fIcenter\fP=1, the bin boundaries are placed midway between the values in the \fIx\fP array.  Also see \fBplhist\fP(3plplot) for drawing histograms from unbinned data. 
+.SH ARGUMENTS
+.TP
+\fInbin\fP (PLINT, input) 
+Number of bins (i.e., number of values in \fIx\fP and \fIy\fP arrays.) 
+.TP
+\fIx\fP (PLFLT *, input) 
+Pointer to array containing values associated with bins.  These must form a strictly increasing sequence. 
+.TP
+\fIy\fP (PLFLT *, input) 
+Pointer to array containing number of points in bin.  This is a PLFLT (instead of PLINT) array so as to allow histograms of probabilities, etc. 
+.TP
+\fIcenter\fP (PLINT, input) 
+Indicates whether the values in \fIx\fP represent the lower bin boundaries (\fIcenter\fP=0) or whether the bin boundaries are to be midway between the \fIx\fP values (\fIcenter\fP=1).  If the values in \fIx\fP are equally spaced and \fIcenter\fP=1, the values in \fIx\fP are the center values of the bins. 
+
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

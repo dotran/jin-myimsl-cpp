@@ -1,0 +1,16 @@
+
+plgver: Get the current library version number 
+
+DESCRIPTION:
+
+    Get the current library version number.  Note: you must have allocated
+    space for this (80 characters is safe). 
+
+SYNOPSIS:
+
+plgver(p_ver)
+
+ARGUMENTS:
+
+    p_ver (char *, output) :    Pointer to the current library version
+    number. 

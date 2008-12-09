@@ -1,0 +1,37 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLHIST 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplhist\fP - Plot a histogram from unbinned data 
+.SH SYNOPSIS
+\fBplhist\fP(\fIn\fP, \fIdata\fP, \fIdatmin\fP, \fIdatmax\fP, \fInbin\fP, \fIoldwin\fP)
+.SH DESCRIPTION
+
+.P
+Plots a histogram from \fIn\fP data points stored in the array \fIdata\fP.  This routine bins the data into \fInbin\fP bins equally spaced between \fIdatmin\fP and \fIdatmax\fP, and calls \fBplbin\fP(3plplot) to draw the resulting histogram.  Parameter \fIoldwin\fP allows the histogram either to be plotted in an existing window or causes \fBplhist\fP(3plplot) to call \fBplenv\fP(3plplot) with suitable limits before plotting the histogram. 
+.SH ARGUMENTS
+.TP
+\fIn\fP (PLINT, input) 
+Number of data points. 
+.TP
+\fIdata\fP (PLFLT *, input) 
+Pointer to array with values of the \fIn\fP data points. 
+.TP
+\fIdatmin\fP (PLFLT, input) 
+Left-hand edge of lowest-valued bin. 
+.TP
+\fIdatmax\fP (PLFLT, input) 
+Right-hand edge of highest-valued bin. 
+.TP
+\fInbin\fP (PLINT, input) 
+Number of (equal-sized) bins into which to divide the interval \fIxmin\fP to \fIxmax\fP. 
+.TP
+\fIoldwin\fP (PLINT, input) 
+If one, the histogram is plotted in the currently-defined window, and if zero, \fBplenv\fP(3plplot) is called automatically before plotting. 
+
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

@@ -1,0 +1,19 @@
+
+pllightsource: Sets the 3D position of the light
+source 
+
+DESCRIPTION:
+
+    Sets the 3D position of the light source for use with plsurf3d. 
+
+SYNOPSIS:
+
+pllightsource(x, y, z)
+
+ARGUMENTS:
+
+    x (PLFLT, input) :      X-coordinate of the light source. 
+
+    y (PLFLT, input) :      Y-coordinate of the light source. 
+
+    z (PLFLT, input) :      Z-coordinate of the light source. 

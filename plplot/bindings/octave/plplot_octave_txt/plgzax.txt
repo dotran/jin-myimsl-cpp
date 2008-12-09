@@ -1,0 +1,22 @@
+
+plgzax: Get z axis parameters 
+
+DESCRIPTION:
+
+    Identical to plgxax, except that arguments are flags for z axis. See
+    the description of plgxax for more detail. 
+
+SYNOPSIS:
+
+plgzax(digmax, digits)
+
+ARGUMENTS:
+
+    digmax (PLINT *, output) :      Pointer to variable with the maximum
+    number of digits for the z axis.  If nonzero, the printed label
+    has been switched to a floating point representation when the
+    number of digits exceeds digmax. 
+
+    digits (PLINT *, output) :      Pointer to variable with the actual
+    number of digits for the numeric labels (z axis) from the last
+    plot. 

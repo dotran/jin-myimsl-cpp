@@ -1,0 +1,22 @@
+
+plsdiplt: Set parameters that define current plot-space window 
+
+DESCRIPTION:
+
+    Set relative minima and maxima that define the current plot-space
+    window.  If plsdiplt is not called the default values of xmin, ymin,
+    xmax, and ymax are 0., 0., 1., and 1. 
+
+SYNOPSIS:
+
+plsdiplt(xmin, ymin, xmax, ymax)
+
+ARGUMENTS:
+
+    xmin (PLFLT, input) :    Relative minimum in x. 
+
+    ymin (PLFLT, input) :    Relative minimum in y. 
+
+    xmax (PLFLT, input) :    Relative maximum in x. 
+
+    ymax (PLFLT, input) :    Relative maximum in y. 

@@ -1,0 +1,23 @@
+
+plgdidev: Get parameters that define current device-space window 
+
+DESCRIPTION:
+
+    Get relative margin width, aspect ratio, and relative justification
+    that define current device-space window. If plsdidev has not been
+    called the default values pointed to by p_mar, p_aspect, p_jx, and
+    p_jy will all be 0. 
+
+SYNOPSIS:
+
+plgdidev(p_mar, p_aspect, p_jx, p_jy)
+
+ARGUMENTS:
+
+    p_mar (PLFLT *, output) :     Pointer to relative margin width. 
+
+    p_aspect (PLFLT *, output) :    Pointer to aspect ratio. 
+
+    p_jx (PLFLT *, output) :    Pointer to relative justification in x. 
+
+    p_jy (PLFLT *, output) :    Pointer to relative justification in y. 

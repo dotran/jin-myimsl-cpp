@@ -1,0 +1,25 @@
+
+plgvpd: Get viewport limits in normalized
+device coordinates 
+
+DESCRIPTION:
+
+    Get viewport limits in normalized device coordinates. 
+
+SYNOPSIS:
+
+plgvpd(p_xmin, p_xmax, p_ymin, p_ymax)
+
+ARGUMENTS:
+
+    p_xmin (PLFLT *, output) :      Lower viewport limit of the normalized
+    device coordinate in x. 
+
+    p_xmax (PLFLT *, output) :      Upper viewport limit of the normalized
+    device coordinate in x. 
+
+    p_ymin (PLFLT *, output) :      Lower viewport limit of the normalized
+    device coordinate in y. 
+
+    p_ymax (PLFLT *, output) :      Upper viewport limit of the normalized
+    device coordinate in y. 

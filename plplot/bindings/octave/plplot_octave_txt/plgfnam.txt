@@ -1,0 +1,15 @@
+
+plgfnam: Get output file name 
+
+DESCRIPTION:
+
+    Gets the current output file name, if applicable. 
+
+SYNOPSIS:
+
+plgfnam(fnam)
+
+ARGUMENTS:
+
+    fnam (char *, output) :    Pointer to file name string (a preallocated
+    string of 80 characters or more). 

@@ -1,0 +1,28 @@
+
+plspage: Set page parameters 
+
+DESCRIPTION:
+
+    Sets the page configuration (optional).  Not all parameters are
+    recognized by all drivers and the interpretation is device-dependent.
+    The X-window driver uses the length and offset parameters to determine
+    the window size and location.  This routine, if used, must be called
+    before initializing PLplot. 
+
+SYNOPSIS:
+
+plspage(xp, yp, xleng, yleng, xoff, yoff)
+
+ARGUMENTS:
+
+    xp (PLFLT, input) :    Number of pixels, x. 
+
+    yp (PLFLT, input) :    Number of pixels, y. 
+
+    xleng (PLINT , input) :    Page length, x. 
+
+    yleng (PLINT, input) :    Page length, y. 
+
+    xoff (PLINT, input) :    Page offset, x. 
+
+    yoff (PLINT, input) :    Page offset, y. 

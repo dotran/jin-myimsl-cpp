@@ -1,0 +1,68 @@
+
+plgriddata: Grid data from irregularly sampled data 
+
+DESCRIPTION:
+
+    Real world data is frequently irregularly sampled, but all PLplot 3D
+    plots require data placed in a uniform grid. This function takes
+    irregularly sampled data from three input arrays x[npts], y[npts], and
+    z[npts], reads the desired grid location from input arrays xg[nptsx]
+    and yg[nptsy], and returns the gridded data into output array
+    zg[nptsx][nptsy].  The algorithm used to grid the data is specified
+    with the argument type which can have one parameter specified in
+    argument data. 
+
+SYNOPSIS:
+
+plggriddata(x, y, z, npts, xg, nptsx, yg, nptsy, zg, type, data)
+
+ARGUMENTS:
+
+    x (PLFLT *, input) :    The input x array. 
+
+    y (PLFLT *, input) :    The input y array. 
+
+    z (PLFLT *, input) :    The input z array. Each triple x[i], y[i],
+    z[i] represents one data sample coordinates. 
+
+    npts (PLINT, input) :    The number of data samples in the x, y and z
+    arrays. 
+
+    xg (PLFLT *, input) :    The input array that specifies the grid
+    spacing in the x direction. Usually xg has nptsx equaly spaced
+    values from the mininum to the maximum values of the x input
+    array. 
+
+    nptsx (PLINT, input) :    The number of points in the xg array. 
+
+    yg (PLFLT *, input) :    The input array that specifies the grid
+    spacing in the y direction. Similar to the xg parameter. 
+
+    nptsy (PLINT, input) :    The number of points in the yg array. 
+
+    sg (PLFLT **, output) :    The output array, where data lies in the
+    regular grid specified by xg and yg. the zg array must exists or
+    be allocated by the user prior to the calling, and must have
+    dimension zg[nptsx][xptsy]. 
+
+    type (PLINT, input) :    The type of gridding algorithm to use, which
+    can be: GRID_CSA: Bivariate Cubic Spline approximation 
+        GRID_DTLI: Delaunay Triangulation Linear Interpolation 
+        GRID_NNI: Natural Neighbors Interpolation 
+        GRID_NNIDW: Nearest Neighbors Inverse Distance Weighted 
+        GRID_NNLI: Nearest Neighbors Linear Interpolation 
+        GRID_NNAIDW:  Nearest Neighbors Around Inverse Distance
+        Weighted 
+    For details on the algorithm read the source file plgridd.c. 
+
+    data (PLFLT, input) :    Some gridding algorithms require extra data,
+    which can be specified through this argument. Currently, for
+    algoritm: GRID_NNIDW, data specifies the number of neighbors to
+    use, the lower the value, the noisier (more local) the
+    approximation is. 
+        GRID_NNLI, data specifies what a thin triangle is, in the
+        range [1. .. 2.]. High values enable the usage of very thin
+        triangles for interpolation, possibly resulting in error in
+        the approximation. 
+        GRID_NNI, only weights greater than data will be accepted. If
+        0, all weigths will be accepted. 

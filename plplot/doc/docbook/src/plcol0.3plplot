@@ -1,0 +1,22 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLCOL0 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplcol0\fP - Set color, map0 
+.SH SYNOPSIS
+\fBplcol0\fP(\fIcolor\fP)
+.SH DESCRIPTION
+
+.P
+Sets the color for color map0 (see the PLplot documentation). 
+.SH ARGUMENTS
+.TP
+\fIcolor\fP (PLINT, input) 
+Integer representing the color.  The defaults at present are (these may change): 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 black (default background)red (default foreground)yellowgreenaquamarinepinkwheatgreybrownblueBlueVioletcyanturquoisemagentasalmonwhite Use \fBplscmap0\fP(3plplot) to change the entire map0 color palette and \fBplscol0\fP(3plplot) to change an individual color in the map0 color palette. 
+
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

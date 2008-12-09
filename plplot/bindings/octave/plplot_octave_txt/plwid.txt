@@ -1,0 +1,20 @@
+
+plwid: Set pen width 
+
+DESCRIPTION:
+
+    Sets the pen width. 
+
+SYNOPSIS:
+
+plwid(width)
+
+ARGUMENTS:
+
+    width (PLINT, input) :    The desired pen width.  If width is negative
+    or the same as the previous value no action is taken.
+    width = 0 should be interpreted as
+    as the minimum valid pen width for the device.  The interpretation of
+    positive
+    width values is also device
+    dependent. 

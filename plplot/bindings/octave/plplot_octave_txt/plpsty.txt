@@ -1,0 +1,17 @@
+
+plpsty: Select area fill pattern 
+
+DESCRIPTION:
+
+    Select one of eight predefined area fill patterns to use (also see
+    plpat). 
+
+SYNOPSIS:
+
+plpsty(n)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      The desired pattern. Pattern 1 consists of
+    horizontal lines, pattern 2 consists of vertical lines, pattern 3
+    consists of lines at 45 degrees angle (upward), and so on. 

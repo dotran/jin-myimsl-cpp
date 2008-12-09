@@ -1,0 +1,28 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLLINE 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplline\fP - Draw a line 
+.SH SYNOPSIS
+\fBplline\fP(\fIn\fP, \fIx\fP, \fIy\fP)
+.SH DESCRIPTION
+
+.P
+Draws line defined by \fIn\fP points in \fIx\fP and \fIy\fP. 
+.SH ARGUMENTS
+.TP
+\fIn\fP (PLINT, input) 
+Number of points defining line. 
+.TP
+\fIx\fP (PLFLT *, input) 
+Pointer to array with x coordinates of points. 
+.TP
+\fIy\fP (PLFLT *, input) 
+Pointer to array with y coordinates of points. 
+
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

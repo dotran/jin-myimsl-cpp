@@ -1,0 +1,18 @@
+
+pllsty: Select line style 
+
+DESCRIPTION:
+
+    This sets the line style according to one of eight predefined patterns
+    (also see plstyl). 
+
+SYNOPSIS:
+
+pllsty(n)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Integer value between 1 and 8. Line style 1 is a
+    continuous line, line style 2 is a line with short dashes and
+    gaps, line style 3 is a line with long dashes and gaps, line style
+    4 has long dashes and short gaps and so on. 

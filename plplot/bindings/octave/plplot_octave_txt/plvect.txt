@@ -1,0 +1,50 @@
+
+plvect: Vector plot 
+
+DESCRIPTION:
+
+    Draws a vector plot of the vector (
+    u[
+    nx][
+    ny],
+    v[
+    nx][
+    ny]). The scaling factor for the vectors is given by scale. A
+    transformation routine pointed to by pltr with a pointer pltr_data for
+    additional data required by the transformation routine is used to map
+    indices within the array to the world coordinates. The style of the
+    vector arrow may be set using plsvect. 
+
+SYNOPSIS:
+
+plvect(u, v, nx, ny, scale, pltr, pltr_data)
+
+ARGUMENTS:
+
+    u, v (PLFLT **, input) :    Pointers to a pair of vectored
+    two-dimensional arrays containing the x and y components of the
+    vector data to be plotted. 
+
+    nx, ny (PLINT, input) :    Physical dimensions of the arrays u and v. 
+
+    scale (PLFLT, input) :    Parameter to control the scaling factor of
+    the vectors for plotting. If scale = 0 then the scaling factor is
+    automatically calculated for the data. If scale < 0 then the
+    scaling factor is automatically calculated for the data and then
+    multiplied by -
+    scale. If scale > 0 then the scaling factor is set to scale. 
+
+    pltr (void (*) (PLFLT, PLFLT, PLFLT *, PLFLT *, PLPointer) , input) : 
+      Pointer to function that defines transformation between indices
+    in array z and the world coordinates (C only).    Transformation
+    functions are provided in the PLplot library: pltr0 for identity
+    mapping, and pltr1 and pltr2 for arbitrary mappings respectively
+    defined by one- and two-dimensional arrays.  In addition,
+    user-supplied routines for the transformation can be used as well.
+     Examples of all of these approaches are given in the PLplot
+    documentation. The transformation function should have the form
+    given by any of pltr0, pltr1, or pltr2. 
+
+    pltr_data (PLPointer, input) :    Extra parameter to help pass
+    information to pltr0, pltr1, pltr2, or whatever routine that is
+    externally supplied. 

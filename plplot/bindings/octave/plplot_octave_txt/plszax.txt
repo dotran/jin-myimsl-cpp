@@ -1,0 +1,23 @@
+
+plszax: Set z axis parameters 
+
+DESCRIPTION:
+
+    Identical to plsxax, except that arguments are flags for z axis. See
+    the description of plsxax for more detail. 
+
+SYNOPSIS:
+
+plszax(digmax, digits)
+
+ARGUMENTS:
+
+    digmax (PLINT, input) :    Variable to set the maximum number of
+    digits for the z axis.    If nonzero, the printed label will be
+    switched to a floating point representation when the number of
+    digits exceeds digmax. 
+
+    digits (PLINT, input) :    Field digits value.  Currently, changing
+    its value here has no effect since it is set only by plbox or
+    plbox3.  However, the user may obtain its value after a call to
+    either of these functions by calling plgzax. 

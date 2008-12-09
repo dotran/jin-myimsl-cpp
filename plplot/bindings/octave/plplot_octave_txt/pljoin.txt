@@ -1,0 +1,24 @@
+
+pljoin: Draw a line between two points 
+
+DESCRIPTION:
+
+    Joins the point (
+    x1, 
+    y1) to (
+    x2, 
+    y2). 
+
+SYNOPSIS:
+
+pljoin(x1, y1, x2, y2)
+
+ARGUMENTS:
+
+    x1 (PLFLT, input) :    x coordinate of first point. 
+
+    y1 (PLFLT, input) :    y coordinate of first point. 
+
+    x2 (PLFLT, input) :    x coordinate of second point. 
+
+    y2 (PLFLT, input) :    y coordinate of second point. 

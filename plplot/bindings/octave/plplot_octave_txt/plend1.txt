@@ -1,0 +1,11 @@
+
+plend1: End plotting session for current stream 
+
+DESCRIPTION:
+
+    Ends a plotting session for the current output stream only.  See
+    plsstrm for more info. 
+
+SYNOPSIS:
+
+plend1()

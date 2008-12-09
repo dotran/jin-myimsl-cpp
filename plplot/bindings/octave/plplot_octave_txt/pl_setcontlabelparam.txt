@@ -1,0 +1,26 @@
+
+pl_setcontlabelparam: Set parameters of
+contour labelling other than format of numerical label
+
+DESCRIPTION:
+
+    Set parameters of contour labelling other than those handled by
+    pl_setcontlabelformat. 
+
+SYNOPSIS:
+
+pl_setcontlabelparam(offset, size, spacing, active)
+
+ARGUMENTS:
+
+    offset (PLFLT, input) :    Offset of label from contour line (if set
+    to 0.0, labels are printed on the lines).  Default value is 0.006. 
+
+    size (PLFLT, input) :    Font height for contour labels (normalized). 
+    Default value is 0.3. 
+
+    spacing (PLFLT, input) :    Spacing parameter for contour labels. 
+    Default value is 0.1. 
+
+    active (PLINT, input) :    Activate labels.  Set to 1 if you want
+    contour labels on. Default is off (0). 

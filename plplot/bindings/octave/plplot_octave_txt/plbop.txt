@@ -1,0 +1,19 @@
+
+plbop: Begin a new page
+
+DESCRIPTION:
+
+    Begins a new page.	For a file driver, the output file is opened if
+    necessary.	Advancing the page via pleop and plbop is useful when a
+    page break is desired at a particular point when plotting to subpages.
+     Another use for pleop and plbop is when plotting pages to different
+    files, since you can manually set the file name by calling plsfnam
+    after the call to pleop. (In fact some drivers may only support a
+    single page per file, making this a necessity.)  One way to handle
+    this case automatically is to page advance via pladv, but enable
+    familying (see plsfam) with a small limit on the file size so that a
+    new family member file will be created on each page break. 
+
+SYNOPSIS:
+
+plbop()

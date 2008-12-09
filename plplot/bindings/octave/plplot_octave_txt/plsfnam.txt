@@ -1,0 +1,18 @@
+
+plsfnam: Set output file name 
+
+DESCRIPTION:
+
+    Sets the current output file name, if applicable.  If the file name
+    has not been specified and is required by the driver, the user will be
+    prompted for it.  If using the X-windows output driver, this sets the
+    display name.  This routine, if used, must be called before
+    initializing PLplot. 
+
+SYNOPSIS:
+
+plsfnam(fnam)
+
+ARGUMENTS:
+
+    fnam (const char *, input) :    Pointer to file name string. 

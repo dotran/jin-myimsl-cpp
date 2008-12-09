@@ -1,0 +1,28 @@
+
+plpoin3:  Plots a character at the specified points in 3 space 
+
+DESCRIPTION:
+
+    Marks a set of n points in x, y, and z using the symbol defined by
+    code. If code is between 32 and 127, the symbol is simply the
+    corresponding printable ASCII character in the default font. Setup
+    similar to plline3. 
+
+SYNOPSIS:
+
+plpoin3(n, x, y, z, code)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of points to be marked. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of the
+    points. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of the
+    points. 
+
+    z (PLFLT *, input) :    Pointer to array with z coordinates of the
+    points. 
+
+    code (PLINT, input) :    Code number for the symbol to be plotted. 

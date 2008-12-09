@@ -1,0 +1,20 @@
+
+pl_setcontlabelformat: Set
+format of numerical label for contours
+
+DESCRIPTION:
+
+    Set format of numerical label for contours. 
+
+SYNOPSIS:
+
+pl_setcontlabelformat(lexp, sigdig)
+
+ARGUMENTS:
+
+    lexp (PLINT, input) :    If the contour numerical label is greater
+    than 10^(lexp) or less than 10^(-lexp), then the exponential
+    format is used.  Default value of lexp is 4. 
+
+    sigdig (PLINT, input) :    Number of significant digits.  Default
+    value is 2. 

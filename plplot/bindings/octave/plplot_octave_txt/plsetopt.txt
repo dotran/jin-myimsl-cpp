@@ -1,0 +1,20 @@
+
+plsetopt: Set any command-line option 
+
+DESCRIPTION:
+
+    Set any command-line option internally from a program before it
+    invokes plinit. opt is the name of the command-line option and optarg
+    is the corresponding command-line option argument. 
+
+SYNOPSIS:
+
+plsetopt(opt, optarg)
+
+ARGUMENTS:
+
+    opt (const char *, output) :    Pointer to string containing the
+    command-line option. 
+
+    optarg (const char *, output) :    Pointer to string containing the
+    argument of the command-line option. 

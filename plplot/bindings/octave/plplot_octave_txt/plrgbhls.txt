@@ -1,0 +1,27 @@
+
+plrgbhls: Convert RGB color to HLS 
+
+DESCRIPTION:
+
+    Convert RGB color coordinates to HLS 
+
+SYNOPSIS:
+
+plrgbhls(r, g, b, p_h, p_l, p_s)
+
+ARGUMENTS:
+
+    r (PLFLT, output) :    Red intensity (0.0-1.0) of the colour 
+
+    g (PLFLT, output) :    Green intensity (0.0-1.0) of the colour 
+
+    b (PLFLT, output) :    Blue intensity (0.0-1.0) of the colour 
+
+    p_h (PLFLT *, input) :    Pointer to hue, in degrees on the colour
+    cone (0.0-360.0) 
+
+    p_l (PLFLT *, input) :    Pointer to lightness, expressed as a
+    fraction of the axis of the colour cone (0.0-1.0) 
+
+    p_s (PLFLT *, input) :    Pointer to saturation, expressed as a
+    fraction of the radius of the colour cone (0.0-1.0) 

@@ -1,0 +1,22 @@
+
+plgcolbg:  Returns the background color
+(cmap0[0]) by 8-bit RGB value 
+
+DESCRIPTION:
+
+    Returns the background color (cmap0[0]) by 8-bit RGB value. 
+
+SYNOPSIS:
+
+plgcolbg(r, g, b)
+
+ARGUMENTS:
+
+    r (PLINT *, output) :    Pointer to an unsigned 8-bit integer (0-255)
+    representing the degree of red in the color. 
+
+    g (PLINT *, output) :    Pointer to an unsigned 8-bit integer (0-255)
+    representing the degree of green in the color. 
+
+    b (PLINT *, output) :    Pointer to an unsigned 8-bit integer (0-255)
+    representing the degree of blue in the color. 

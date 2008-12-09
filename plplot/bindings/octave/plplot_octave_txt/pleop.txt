@@ -1,0 +1,11 @@
+
+pleop: Eject current page 
+
+DESCRIPTION:
+
+    Clears the graphics screen of an interactive device, or ejects a page
+    on a plotter.  See plbop for more information. 
+
+SYNOPSIS:
+
+pleop()

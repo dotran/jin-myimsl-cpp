@@ -1,0 +1,19 @@
+
+plsmem: Set the memory area to be plotted 
+
+DESCRIPTION:
+
+    This memory will have to be freed by the user! 
+
+SYNOPSIS:
+
+plsmem(maxx, maxy, plotmem)
+
+ARGUMENTS:
+
+    maxx (PLINT, input) :    Size of memory area in the X coordinate. 
+
+    maxy (PLINT, input) :    Size of memory area in the Y coordinate. 
+
+    plotmem (void *, input) :     Pointer to the beginning of the
+    user-supplied memory area. 

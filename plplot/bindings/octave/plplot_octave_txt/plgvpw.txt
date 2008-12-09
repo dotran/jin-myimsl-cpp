@@ -1,0 +1,24 @@
+
+plgvpw: Get viewport limits in world coordinates 
+
+DESCRIPTION:
+
+    Get viewport limits in world coordinates. 
+
+SYNOPSIS:
+
+plgvpw(p_xmin, p_xmax, p_ymin, p_ymax)
+
+ARGUMENTS:
+
+    p_xmin (PLFLT *, output) :      Lower viewport limit of the world
+    coordinate in x. 
+
+    p_xmax (PLFLT *, output) :      Upper viewport limit of the world
+    coordinate in x. 
+
+    p_ymin (PLFLT *, output) :      Lower viewport limit of the world
+    coordinate in y. 
+
+    p_ymax (PLFLT *, output) :      Upper viewport limit of the world
+    coordinate in y. 

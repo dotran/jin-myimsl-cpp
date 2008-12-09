@@ -1,0 +1,33 @@
+
+plpoly3: Draw a polygon in 3 space 
+
+DESCRIPTION:
+
+    Bugs:  If one of the first two segments is of zero length, or if they
+    are colinear, the calculation of visibility has a 50/50 chance of
+    being correct.  Avoid such situations :-).	See x18c.c for an example
+    of this problem. (Search for 20.1). 
+
+SYNOPSIS:
+
+plpoly3(n, x, y, z, draw, ifcc)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of points defining line. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of points. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of points. 
+
+    z (PLFLT *, input) :    Pointer to array with z coordinates of points. 
+
+    draw (PLINT *, input) :    Pointer to array which controls drawing the
+    segments of the polygon.  If draw[i] is true, then the polygon
+    segment from index [i] to [i+1] is drawn, otherwise, not. 
+
+    ifcc (PLINT, input) :    If ifcc=1 the directionality of the polygon
+    is determined by assuming the points are laid out in a
+    counter-clockwise order. If ifcc=0 the directionality of the
+    polygon is determined by assuming the points are laid out in a
+    clockwise order. 

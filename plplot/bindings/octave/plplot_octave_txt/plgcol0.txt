@@ -1,0 +1,23 @@
+
+plgcol0: Returns 8-bit RGB values for given color
+from color map0 
+
+DESCRIPTION:
+
+    Returns 8-bit RGB values (-255) for given color from color map0 (see
+    the PLplot documentation).	Values are negative if an invalid color id
+    is given. 
+
+SYNOPSIS:
+
+plgcol0(icol0, r, g, b)
+
+ARGUMENTS:
+
+    icol0 (PLINT, input) :    Index of desired cmap0 color. 
+
+    r (PLINT *, output) :    Pointer to 8-bit red value. 
+
+    g (PLINT *, output) :    Pointer to 8-bit green value. 
+
+    b (PLINT *, output) :    Pointer to 8-bit blue value. 

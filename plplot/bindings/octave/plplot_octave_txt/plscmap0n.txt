@@ -1,0 +1,17 @@
+
+plscmap0n: Set number of colors in color map0 
+
+DESCRIPTION:
+
+    The drivers are not guaranteed to support more than 16 colors. 
+
+SYNOPSIS:
+
+plscmap0n(ncol0)
+
+ARGUMENTS:
+
+    ncol0 (PLINT, input) :    Number of colors that will be allocated in
+    the map0 palette. If this number is zero or less, then the value
+    from the previous call to plscmap0n is used and if there is no
+    previous call, then a default value is used. 

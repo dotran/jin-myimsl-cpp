@@ -1,0 +1,26 @@
+
+plsdiplz: Set parameters incrementally (zoom mode) that define current plot-space window 
+
+DESCRIPTION:
+
+    Set relative minima and maxima incrementally (zoom mode) that define
+    the current plot-space window.  This function has the same effect as
+    plsdiplt if that function has not been previously called.  Otherwise,
+    this function implements zoom mode using the transformation min_used =
+    old_min + old_length*min  and max_used = old_min + old_length*max  for
+    each axis.	For example, if min = 0.05 and max = 0.95 for each axis,
+    repeated calls to plsdiplz will zoom in by 10 per cent for each call. 
+
+SYNOPSIS:
+
+plsdiplz(xmin, ymin, xmax, ymax)
+
+ARGUMENTS:
+
+    xmin (PLFLT, input) :    Relative (incremental) minimum in x. 
+
+    ymin (PLFLT, input) :    Relative (incremental) minimum in y. 
+
+    xmax (PLFLT, input) :    Relative (incremental) maximum in x. 
+
+    ymax (PLFLT, input) :    Relative (incremental) maximum in y. 

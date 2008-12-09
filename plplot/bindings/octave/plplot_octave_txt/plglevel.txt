@@ -1,0 +1,18 @@
+
+plglevel: Get the (current) run level 
+
+DESCRIPTION:
+
+    Get the (current) run level. Valid settings are: 0,  uninitialized 
+	    1,	initialized 
+	    2,	viewport defined 
+	    3,	world coords defined 
+
+
+SYNOPSIS:
+
+plglevel(p_level)
+
+ARGUMENTS:
+
+    p_level (PLINT *, output) :    Pointer to the run level. 

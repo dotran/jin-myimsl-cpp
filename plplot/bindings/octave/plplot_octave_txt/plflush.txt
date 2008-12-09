@@ -1,0 +1,10 @@
+
+plflush: Flushes the output stream 
+
+DESCRIPTION:
+
+    Flushes the output stream. Use sparingly, if at all. 
+
+SYNOPSIS:
+
+plflush()

@@ -1,0 +1,22 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLPSTY 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplpsty\fP - Select area fill pattern 
+.SH SYNOPSIS
+\fBplpsty\fP(\fIn\fP)
+.SH DESCRIPTION
+
+.P
+Select one of eight predefined area fill patterns to use (also see \fBplpat\fP(3plplot)). 
+.SH ARGUMENTS
+.TP
+\fIn\fP (PLINT, input) 
+The desired pattern. Pattern 1 consists of horizontal lines, pattern 2 consists of vertical lines, pattern 3 consists of lines at 45 degrees angle (upward), and so on. 
+
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

@@ -1,0 +1,23 @@
+
+plcpstrm: Copy state parameters from the
+reference stream to the current stream 
+
+DESCRIPTION:
+
+    This function is used for making save files of selected plots (e.g.
+    from the TK driver).  After initializing, you can get a copy of the
+    current plot to the specified device by switching to this stream and
+    issuing a plcpstrm and a plreplot, with calls to plbop and pleop as
+    appropriate.  The plot buffer must have previously been enabled (done
+    automatically by some display drivers, such as X). 
+
+SYNOPSIS:
+
+plcpstrm(iplsr, flags)
+
+ARGUMENTS:
+
+    iplsr (PLINT, input) :    Number of reference stream. 
+
+    flags (PLINT, input) :    If flags is set to 1 the device coordinates
+    are not copied from the reference to current stream. 

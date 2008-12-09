@@ -1,0 +1,13 @@
+# -----------------------------------------------------------------------
+# $Id: emx.in,v 1.1 1994/09/16 03:54:50 mjl Exp $
+#
+# Mark Olesen
+# olesen@Weber.QueensU.CA
+# 8-Sept-1994
+#
+# -----------------------------------------------------------------------
+
+# Add compiler specific driver to driver list
+
+ADD_DRIVERS_C = emxvga.c
+ADD_DRIVERS_OBJ = emxvga$O

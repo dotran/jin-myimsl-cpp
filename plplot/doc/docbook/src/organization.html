@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Organization of this Manual</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="The PLplot Plotting Library"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Introduction"
+HREF="intro.html"><LINK
+REL="PREVIOUS"
+TITLE="Installing and Using the PLplot Library"
+HREF="installing.html"><LINK
+REL="NEXT"
+TITLE="Copyrights"
+HREF="copyrights.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>The PLplot Plotting Library: Programmer's Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="installing.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. Introduction</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="copyrights.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="organization"
+>Organization of this Manual</A
+></H1
+><P
+>      OLD DOCS, NEEDS UPDATING!
+    </P
+><P
+>      The PLplot library has been designed so that it is easy to write
+      programs producing graphical output without having to set up large
+      numbers of parameters.  However, more precise control of the results
+      may be necessary, and these are accommodated by providing lower-level
+      routines which change the system defaults.  The manual first describes
+      the overall process of producing a graph using the high-level
+      routines (see <A
+HREF="simple.html#simple-graph"
+>the Section called <I
+>Plotting a Simple Graph</I
+> in Chapter 2</A
+>).  For a discussion of
+      the underlying concepts of the plotting process and an introduction
+      to some of the more complex routines (see <A
+HREF="advanced.html"
+>Chapter 3</A
+>).
+      An alphabetical list of the user-accessible PLplot functions with
+      detailed descriptions is given in the reference section of the manual
+      (see <A
+HREF="api.html"
+>Chapter 16</A
+>).
+    </P
+><P
+>      Because the PLplot kernel is written in C, standard C syntax is used
+      in the description of each PLplot function.  The C and Fortran
+      language interfaces are discussed in Appendix \ref{ap:lang}; look
+      there if you have difficulty interpreting the call syntax as
+      described in this manual.  The meaning of function (subroutine)
+      arguments is typically the same regardless of whether you are calling
+      from C or Fortran (but there are some exceptions to this).  The
+      arguments for each function are usually specified in terms of PLFLT
+      and PLINT&#8212;these are the internal PLplot representations for
+      integer and floating point, and are typically a long and a float (or
+      an INTEGER and a REAL, for Fortran programmers).  See Appendix
+      \ref{ap:lang} for more detail.
+    </P
+><P
+>      Also, you can use PLplot from C++ just as you would from C.  No
+      special classes are available at this time, just use it as any other
+      procedural type library.  Simply include
+      <TT
+CLASS="filename"
+>plplot.h</TT
+>, and invoke as you would from C.
+    </P
+><P
+>      The output devices supported by PLplot are listed in Appendix
+      \ref{ap:dev}, along with description of the device driver--PLplot
+      interface, metafile output, family files, and vt100/tek4010
+      emulators.  In Appendix\ref{ap:sys} the usage and installation for
+      each system supported by PLplot is described (not guaranteed to be
+      entirely up-to-date; check the release notes to be sure).
+    </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="installing.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="copyrights.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Installing and Using the PLplot Library</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="intro.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Copyrights</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

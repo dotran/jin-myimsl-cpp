@@ -1,0 +1,20 @@
+
+plfont: Set character font 
+
+DESCRIPTION:
+
+    Sets the default character font for subsequent character drawing. Also
+    affects symbols produced by plpoin.  This routine has no effect unless
+    the extended character set is loaded (see plfontld). 
+
+SYNOPSIS:
+
+plfont(font)
+
+ARGUMENTS:
+
+    font (PLINT, input) :    Specifies the font: 1: Normal font (simplest
+    and fastest) 
+        2: Roman font 
+        3: Italic font 
+        4: Script font 

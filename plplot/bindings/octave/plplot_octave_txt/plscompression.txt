@@ -1,0 +1,17 @@
+
+plscompression: Set device-compression level 
+
+DESCRIPTION:
+
+    Set device-compression level.  Only used for drivers that provide
+    compression.  This function, if used, should be invoked before a call
+    to plinit. 
+
+SYNOPSIS:
+
+plscompression(compression)
+
+ARGUMENTS:
+
+    compression (PLINT, input) :    The desired compression level. This is
+    a device-dependent value. 

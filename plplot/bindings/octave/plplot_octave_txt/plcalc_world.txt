@@ -1,0 +1,50 @@
+
+plcalc_world: Calculate world coordinates and
+corresponding window index from relative device coordinates 
+
+DESCRIPTION:
+
+    Calculate world coordinates,
+    wx and
+    wy, and corresponding
+    window index
+    from relative device coordinates,
+    rx and
+    ry. 
+
+SYNOPSIS:
+
+plcalc_world(rx, ry, wx, wy, window)
+
+ARGUMENTS:
+
+    rx (PLFLT, input) :    Input relative device coordinate (ranging from
+    0. to 1.) for the x coordinate. 
+
+    ry (PLFLT, input) :    Input relative device coordinate (ranging from
+    0. to 1.) for the y coordinate. 
+
+    wx (PLFLT *, output) :    Pointer to the returned world coordinate for
+    x corresponding to the relative device coordinates rx and ry. 
+
+    wy (PLFLT *, output) :    Pointer to the returned world coordinate for
+    y corresponding to the relative device coordinates rx and ry. 
+
+    window (PLINT *, output) :      Pointer to the returned last defined
+    window index that corresponds to the input relative device
+    coordinates (and the returned world coordinates).  To give some
+    background on the window index, for each page the initial window
+    index is set to zero, and each time plwind is called within the
+    page, world and device coordinates are stored for the window and
+    the window index is incremented.  Thus, for a simple page layout
+    with non-overlapping viewports and one window per viewport, window
+    corresponds to the viewport index (in the order which the
+    viewport/windows were created) of the only viewport/window
+    corresponding to rx and ry.  However, for more complicated layouts
+    with potentially overlapping viewports and possibly more than one
+    window (set of world coordinates) per viewport, window and the
+    corresponding output world coordinates corresponds to the last
+    window created that fulfils the criterion that the relative device
+    coordinates are inside it.  Finally, in all cases where the input
+    relative device coordinates are not inside any viewport/window,
+    then window is set to -1. 

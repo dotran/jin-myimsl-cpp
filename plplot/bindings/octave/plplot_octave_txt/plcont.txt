@@ -1,0 +1,49 @@
+
+plcont: Contour plot 
+
+DESCRIPTION:
+
+    Draws a contour plot of the data in z[
+    nx][
+    ny], using the nlevel contour levels specified by clevel. Only the
+    region of the array from kx to lx and from ky to ly is plotted out.  A
+    transformation routine pointed to by pltr with a pointer pltr_data for
+    additional data required by the transformation routine is used to map
+    indices within the array to the world coordinates.	See the following
+    discussion of the arguments and the PLplot documentation for more
+    information. 
+
+SYNOPSIS:
+
+plcont(z, nx, ny, kx, lx, ky, ly, clevel, nlevel, pltr, pltr_data)
+
+ARGUMENTS:
+
+    z (PLFLT **, input) :    Pointer to a vectored two-dimensional array
+    containing data to be contoured. 
+
+    nx, ny (PLINT, input) :    Physical dimensions of array z. 
+
+    kx, lx (PLINT, input) :    Range of x indices to consider. 
+
+    ky, ly (PLINT, input) :    Range of y indices to consider. 
+
+    clevel (PLFLT *, input) :     Pointer to array specifying levels at
+    which to draw contours. 
+
+    nlevel (PLINT, input) :    Number of contour levels to draw. 
+
+    pltr (void (*) (PLFLT, PLFLT, PLFLT *, PLFLT *, PLPointer) , input) : 
+      Pointer to function that defines transformation between indices
+    in array z and the world coordinates (C only).    Transformation
+    functions are provided in the PLplot library: pltr0 for identity
+    mapping, and pltr1 and pltr2 for arbitrary mappings respectively
+    defined by one- and two-dimensional arrays.  In addition,
+    user-supplied routines for the transformation can be used as well.
+     Examples of all of these approaches are given in the PLplot
+    documentation. The transformation function should have the form
+    given by any of pltr0, pltr1, or pltr2. 
+
+    pltr_data (PLPointer, input) :    Extra parameter to help pass
+    information to pltr0, pltr1, pltr2, or whatever routine that is
+    externally supplied. 

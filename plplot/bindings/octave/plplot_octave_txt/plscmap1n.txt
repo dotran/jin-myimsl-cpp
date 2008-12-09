@@ -1,0 +1,19 @@
+
+plscmap1n: Set number of colors in color map1 
+
+DESCRIPTION:
+
+    Set number of colors in color map1, (re-)allocate color map1, and set
+    default values if this is the first allocation (see the PLplot
+    documentation). 
+
+SYNOPSIS:
+
+plscmap1n(ncol1)
+
+ARGUMENTS:
+
+    ncol1 (PLINT, input) :    Number of colors that will be allocated in
+    the map1 palette. If this number is zero or less, then the value
+    from the previous call to plscmap1n is used and if there is no
+    previous call, then a default value is used. 

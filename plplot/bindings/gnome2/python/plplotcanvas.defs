@@ -1,0 +1,1678 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Canvas
+  (in-module "Plplot")
+  (parent "GnomeCanvas")
+  (c-name "PlplotCanvas")
+  (gtype-id "PLPLOT_TYPE_CANVAS")
+)
+
+;; Enumerations and flags ...
+
+
+;; From ../../../include/plplotcanvas.h
+
+(define-function plplot_canvas_get_type
+  (c-name "plplot_canvas_get_type")
+  (return-type "GType")
+  (parameters
+  )
+)
+
+(define-function plplot_canvas_new
+  (c-name "plplot_canvas_new")
+  (is-constructor-of "PlplotCanvas")
+  (return-type "PlplotCanvas*")
+  (parameters
+  )
+)
+
+(define-method devinit
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_devinit")
+  (return-type "none")
+)
+
+(define-method dispose
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_dispose")
+  (return-type "none")
+)
+
+(define-method get_stream_number
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_get_stream_number")
+  (return-type "gint")
+)
+
+(define-method set_size
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_set_size")
+  (return-type "none")
+  (parameters
+    '("gint" "width")
+    '("gint" "height")
+  )
+)
+
+(define-method set_zoom
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_set_zoom")
+  (return-type "none")
+  (parameters
+    '("gdouble" "magnification")
+  )
+)
+
+(define-method use_text
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_use_text")
+  (return-type "none")
+  (parameters
+    '("gboolean" "use_text")
+  )
+)
+
+(define-method use_pixmap
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_use_pixmap")
+  (return-type "none")
+  (parameters
+    '("gboolean" "use_pixmap")
+  )
+)
+
+(define-method use_persistence
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_use_persistence")
+  (return-type "none")
+  (parameters
+    '("gboolean" "use_persistence")
+  )
+)
+
+(define-method pl_setcontlabelformat
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pl_setcontlabelformat")
+  (return-type "none")
+  (parameters
+    '("long" "lexp")
+    '("long" "sigdig")
+  )
+)
+
+(define-method pl_setcontlabelparam
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pl_setcontlabelparam")
+  (return-type "none")
+  (parameters
+    '("double" "offset")
+    '("double" "size")
+    '("double" "spacing")
+    '("long" "active")
+  )
+)
+
+(define-method pladv
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pladv")
+  (return-type "none")
+  (parameters
+    '("long" "page")
+  )
+)
+
+(define-method plarrows
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plarrows")
+  (return-type "none")
+  (parameters
+    '("double*" "u")
+    '("double*" "v")
+    '("double*" "x")
+    '("double*" "y")
+    '("long" "n")
+    '("double" "scale")
+    '("double" "dx")
+    '("double" "dy")
+  )
+)
+
+(define-method plvect
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plvect")
+  (return-type "none")
+  (parameters
+    '("double**" "u")
+    '("double**" "v")
+    '("long" "nx")
+    '("long" "ny")
+    '("double" "scale")
+    '("void-(*" "pltr")
+  )
+)
+
+(define-method plsvect
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsvect")
+  (return-type "none")
+  (parameters
+    '("double*" "arrowx")
+    '("double*" "arrowy")
+    '("long" "npts")
+    '("long" "fill")
+  )
+)
+
+(define-method plaxes
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plaxes")
+  (return-type "none")
+  (parameters
+    '("double" "x0")
+    '("double" "y0")
+    '("const-char*" "xopt")
+    '("double" "xtick")
+    '("long" "nxsub")
+    '("const-char*" "yopt")
+    '("double" "ytick")
+    '("long" "nysub")
+  )
+)
+
+(define-method plbin
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plbin")
+  (return-type "none")
+  (parameters
+    '("long" "nbin")
+    '("double*" "x")
+    '("double*" "y")
+    '("long" "center")
+  )
+)
+
+(define-method plbop
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plbop")
+  (return-type "none")
+)
+
+(define-method plbox
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plbox")
+  (return-type "none")
+  (parameters
+    '("const-char*" "xopt")
+    '("double" "xtick")
+    '("long" "nxsub")
+    '("const-char*" "yopt")
+    '("double" "ytick")
+    '("long" "nysub")
+  )
+)
+
+(define-method plbox3
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plbox3")
+  (return-type "none")
+  (parameters
+    '("const-char*" "xopt")
+    '("const-char*" "xlabel")
+    '("double" "xtick")
+    '("long" "nsubx")
+    '("const-char*" "yopt")
+    '("const-char*" "ylabel")
+    '("double" "ytick")
+    '("long" "nsuby")
+    '("const-char*" "zopt")
+    '("const-char*" "zlabel")
+    '("double" "ztick")
+    '("long" "nsubz")
+  )
+)
+
+(define-method plcalc_world
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plcalc_world")
+  (return-type "none")
+  (parameters
+    '("double" "rx")
+    '("double" "ry")
+    '("double*" "wx")
+    '("double*" "wy")
+    '("long*" "window")
+  )
+)
+
+(define-method plclear
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plclear")
+  (return-type "none")
+)
+
+(define-method plcol0
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plcol0")
+  (return-type "none")
+  (parameters
+    '("long" "icol0")
+  )
+)
+
+(define-method plcol1
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plcol1")
+  (return-type "none")
+  (parameters
+    '("double" "col1")
+  )
+)
+
+(define-method plcont
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plcont")
+  (return-type "none")
+  (parameters
+    '("double**" "f")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "kx")
+    '("long" "lx")
+    '("long" "ky")
+    '("long" "ly")
+    '("double*" "clevel")
+    '("long" "nlevel")
+    '("void-(*" "pltr")
+  )
+)
+
+(define-method plfcont
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfcont")
+  (return-type "none")
+  (parameters
+    '("double-(*" "f2eval")
+  )
+)
+
+(define-method plcpstrm
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plcpstrm")
+  (return-type "none")
+  (parameters
+    '("long" "iplsr")
+    '("long" "flags")
+  )
+)
+
+(define-method pldid2pc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pldid2pc")
+  (return-type "none")
+  (parameters
+    '("double*" "xmin")
+    '("double*" "ymin")
+    '("double*" "xmax")
+    '("double*" "ymax")
+  )
+)
+
+(define-method pldip2dc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pldip2dc")
+  (return-type "none")
+  (parameters
+    '("double*" "xmin")
+    '("double*" "ymin")
+    '("double*" "xmax")
+    '("double*" "ymax")
+  )
+)
+
+(define-method plend
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plend")
+  (return-type "none")
+)
+
+(define-method plend1
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plend1")
+  (return-type "none")
+)
+
+(define-method plenv
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plenv")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+    '("long" "just")
+    '("long" "axis")
+  )
+)
+
+(define-method plenv0
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plenv0")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+    '("long" "just")
+    '("long" "axis")
+  )
+)
+
+(define-method pleop
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pleop")
+  (return-type "none")
+)
+
+(define-method plerrx
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plerrx")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "xmin")
+    '("double*" "xmax")
+    '("double*" "y")
+  )
+)
+
+(define-method plerry
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plerry")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "ymin")
+    '("double*" "ymax")
+  )
+)
+
+(define-method plfamadv
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfamadv")
+  (return-type "none")
+)
+
+(define-method plfill
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfill")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+  )
+)
+
+(define-method plfill3
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfill3")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("double*" "z")
+  )
+)
+
+(define-method plflush
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plflush")
+  (return-type "none")
+)
+
+(define-method plfont
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfont")
+  (return-type "none")
+  (parameters
+    '("long" "ifont")
+  )
+)
+
+(define-method plfontld
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfontld")
+  (return-type "none")
+  (parameters
+    '("long" "fnt")
+  )
+)
+
+(define-method plgchr
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgchr")
+  (return-type "none")
+  (parameters
+    '("double*" "p_def")
+    '("double*" "p_ht")
+  )
+)
+
+(define-method plgcol0
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgcol0")
+  (return-type "none")
+  (parameters
+    '("long" "icol0")
+    '("long*" "r")
+    '("long*" "g")
+    '("long*" "b")
+  )
+)
+
+(define-method plgcolbg
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgcolbg")
+  (return-type "none")
+  (parameters
+    '("long*" "r")
+    '("long*" "g")
+    '("long*" "b")
+  )
+)
+
+(define-method plgcompression
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgcompression")
+  (return-type "none")
+  (parameters
+    '("long*" "compression")
+  )
+)
+
+(define-method plgdev
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgdev")
+  (return-type "none")
+  (parameters
+    '("char*" "p_dev")
+  )
+)
+
+(define-method plgdidev
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgdidev")
+  (return-type "none")
+  (parameters
+    '("double*" "p_mar")
+    '("double*" "p_aspect")
+    '("double*" "p_jx")
+    '("double*" "p_jy")
+  )
+)
+
+(define-method plgdiori
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgdiori")
+  (return-type "none")
+  (parameters
+    '("double*" "p_rot")
+  )
+)
+
+(define-method plgdiplt
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgdiplt")
+  (return-type "none")
+  (parameters
+    '("double*" "p_xmin")
+    '("double*" "p_ymin")
+    '("double*" "p_xmax")
+    '("double*" "p_ymax")
+  )
+)
+
+(define-method plgfci
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgfci")
+  (return-type "none")
+  (parameters
+    '("PLUNICODE*" "pfci")
+  )
+)
+
+(define-method plgfam
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgfam")
+  (return-type "none")
+  (parameters
+    '("long*" "p_fam")
+    '("long*" "p_num")
+    '("long*" "p_bmax")
+  )
+)
+
+(define-method plgfnam
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgfnam")
+  (return-type "none")
+  (parameters
+    '("char*" "fnam")
+  )
+)
+
+(define-method plglevel
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plglevel")
+  (return-type "none")
+  (parameters
+    '("long*" "p_level")
+  )
+)
+
+(define-method plgpage
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgpage")
+  (return-type "none")
+  (parameters
+    '("double*" "p_xp")
+    '("double*" "p_yp")
+    '("long*" "p_xleng")
+    '("long*" "p_yleng")
+    '("long*" "p_xoff")
+    '("long*" "p_yoff")
+  )
+)
+
+(define-method plgra
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgra")
+  (return-type "none")
+)
+
+(define-method plgriddata
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgriddata")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double*" "z")
+    '("long" "npts")
+    '("double*" "xg")
+    '("long" "nptsx")
+    '("double*" "yg")
+    '("long" "nptsy")
+    '("double**" "zg")
+    '("long" "type")
+    '("double" "data")
+  )
+)
+
+(define-method plgspa
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgspa")
+  (return-type "none")
+  (parameters
+    '("double*" "xmin")
+    '("double*" "xmax")
+    '("double*" "ymin")
+    '("double*" "ymax")
+  )
+)
+
+(define-method plgstrm
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgstrm")
+  (return-type "none")
+  (parameters
+    '("long*" "p_strm")
+  )
+)
+
+(define-method plgver
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgver")
+  (return-type "none")
+  (parameters
+    '("char*" "p_ver")
+  )
+)
+
+(define-method plgvpd
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgvpd")
+  (return-type "none")
+  (parameters
+    '("double*" "p_xmin")
+    '("double*" "p_xmax")
+    '("double*" "p_ymin")
+    '("double*" "p_ymax")
+  )
+)
+
+(define-method plgvpw
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgvpw")
+  (return-type "none")
+  (parameters
+    '("double*" "p_xmin")
+    '("double*" "p_xmax")
+    '("double*" "p_ymin")
+    '("double*" "p_ymax")
+  )
+)
+
+(define-method plgxax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgxax")
+  (return-type "none")
+  (parameters
+    '("long*" "p_digmax")
+    '("long*" "p_digits")
+  )
+)
+
+(define-method plgyax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgyax")
+  (return-type "none")
+  (parameters
+    '("long*" "p_digmax")
+    '("long*" "p_digits")
+  )
+)
+
+(define-method plgzax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plgzax")
+  (return-type "none")
+  (parameters
+    '("long*" "p_digmax")
+    '("long*" "p_digits")
+  )
+)
+
+(define-method plhist
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plhist")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "data")
+    '("double" "datmin")
+    '("double" "datmax")
+    '("long" "nbin")
+    '("long" "oldwin")
+  )
+)
+
+(define-method plhls
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plhls")
+  (return-type "none")
+  (parameters
+    '("double" "h")
+    '("double" "l")
+    '("double" "s")
+  )
+)
+
+(define-method plinit
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plinit")
+  (return-type "none")
+)
+
+(define-method pljoin
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pljoin")
+  (return-type "none")
+  (parameters
+    '("double" "x1")
+    '("double" "y1")
+    '("double" "x2")
+    '("double" "y2")
+  )
+)
+
+(define-method pllab
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pllab")
+  (return-type "none")
+  (parameters
+    '("const-char*" "xlabel")
+    '("const-char*" "ylabel")
+    '("const-char*" "tlabel")
+  )
+)
+
+(define-method pllightsource
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pllightsource")
+  (return-type "none")
+  (parameters
+    '("double" "x")
+    '("double" "y")
+    '("double" "z")
+  )
+)
+
+(define-method plline
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plline")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+  )
+)
+
+(define-method plline3
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plline3")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("double*" "z")
+  )
+)
+
+(define-method pllsty
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pllsty")
+  (return-type "none")
+  (parameters
+    '("long" "lin")
+  )
+)
+
+(define-method plmap
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmap")
+  (return-type "none")
+  (parameters
+    '("void-(*" "mapform")
+  )
+)
+
+(define-method plmeridians
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmeridians")
+  (return-type "none")
+  (parameters
+    '("void-(*" "mapform")
+  )
+)
+
+(define-method plmesh
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmesh")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+  )
+)
+
+(define-method plmeshc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmeshc")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("double*" "clevel")
+    '("long" "nlevel")
+  )
+)
+
+(define-method plmkstrm
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmkstrm")
+  (return-type "none")
+  (parameters
+    '("long*" "p_strm")
+  )
+)
+
+(define-method plmtex
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plmtex")
+  (return-type "none")
+  (parameters
+    '("const-char*" "side")
+    '("double" "disp")
+    '("double" "pos")
+    '("double" "just")
+    '("const-char*" "text")
+  )
+)
+
+(define-method plot3d
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plot3d")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("long" "side")
+  )
+)
+
+(define-method plot3dc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plot3dc")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("double*" "clevel")
+    '("long" "nlevel")
+  )
+)
+
+(define-method plot3dcl
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plot3dcl")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("double*" "clevel")
+    '("long" "nlevel")
+    '("long" "ixstart")
+    '("long" "ixn")
+    '("long*" "indexymin")
+    '("long*" "indexymax")
+  )
+)
+
+(define-method plpat
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plpat")
+  (return-type "none")
+  (parameters
+    '("long" "nlin")
+    '("long*" "inc")
+    '("long*" "del")
+  )
+)
+
+(define-method plpoin
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plpoin")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("long" "code")
+  )
+)
+
+(define-method plpoin3
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plpoin3")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("double*" "z")
+    '("long" "code")
+  )
+)
+
+(define-method plpoly3
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plpoly3")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("double*" "z")
+    '("long*" "draw")
+    '("long" "ifcc")
+  )
+)
+
+(define-method plprec
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plprec")
+  (return-type "none")
+  (parameters
+    '("long" "setp")
+    '("long" "prec")
+  )
+)
+
+(define-method plpsty
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plpsty")
+  (return-type "none")
+  (parameters
+    '("long" "patt")
+  )
+)
+
+(define-method plptex
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plptex")
+  (return-type "none")
+  (parameters
+    '("double" "x")
+    '("double" "y")
+    '("double" "dx")
+    '("double" "dy")
+    '("double" "just")
+    '("const-char*" "text")
+  )
+)
+
+(define-method plreplot
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plreplot")
+  (return-type "none")
+)
+
+(define-method plrgb
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plrgb")
+  (return-type "none")
+  (parameters
+    '("double" "r")
+    '("double" "g")
+    '("double" "b")
+  )
+)
+
+(define-method plrgb1
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plrgb1")
+  (return-type "none")
+  (parameters
+    '("long" "r")
+    '("long" "g")
+    '("long" "b")
+  )
+)
+
+(define-method plschr
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plschr")
+  (return-type "none")
+  (parameters
+    '("double" "def")
+    '("double" "scale")
+  )
+)
+
+(define-method plscmap0
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscmap0")
+  (return-type "none")
+  (parameters
+    '("long*" "r")
+    '("long*" "g")
+    '("long*" "b")
+    '("long" "ncol0")
+  )
+)
+
+(define-method plscmap0n
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscmap0n")
+  (return-type "none")
+  (parameters
+    '("long" "ncol0")
+  )
+)
+
+(define-method plscmap1
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscmap1")
+  (return-type "none")
+  (parameters
+    '("long*" "r")
+    '("long*" "g")
+    '("long*" "b")
+    '("long" "ncol1")
+  )
+)
+
+(define-method plscmap1l
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscmap1l")
+  (return-type "none")
+  (parameters
+    '("long" "itype")
+    '("long" "npts")
+    '("double*" "intensity")
+    '("double*" "coord1")
+    '("double*" "coord2")
+    '("double*" "coord3")
+    '("long*" "rev")
+  )
+)
+
+(define-method plscmap1n
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscmap1n")
+  (return-type "none")
+  (parameters
+    '("long" "ncol1")
+  )
+)
+
+(define-method plscol0
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscol0")
+  (return-type "none")
+  (parameters
+    '("long" "icol0")
+    '("long" "r")
+    '("long" "g")
+    '("long" "b")
+  )
+)
+
+(define-method plscolbg
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscolbg")
+  (return-type "none")
+  (parameters
+    '("long" "r")
+    '("long" "g")
+    '("long" "b")
+  )
+)
+
+(define-method plscolor
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscolor")
+  (return-type "none")
+  (parameters
+    '("long" "color")
+  )
+)
+
+(define-method plscompression
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plscompression")
+  (return-type "none")
+  (parameters
+    '("long" "compression")
+  )
+)
+
+(define-method plsdev
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdev")
+  (return-type "none")
+  (parameters
+    '("const-char*" "devname")
+  )
+)
+
+(define-method plsdidev
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdidev")
+  (return-type "none")
+  (parameters
+    '("double" "mar")
+    '("double" "aspect")
+    '("double" "jx")
+    '("double" "jy")
+  )
+)
+
+(define-method plsdimap
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdimap")
+  (return-type "none")
+  (parameters
+    '("long" "dimxmin")
+    '("long" "dimxmax")
+    '("long" "dimymin")
+    '("long" "dimymax")
+    '("double" "dimxpmm")
+    '("double" "dimypmm")
+  )
+)
+
+(define-method plsdiori
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdiori")
+  (return-type "none")
+  (parameters
+    '("double" "rot")
+  )
+)
+
+(define-method plsdiplt
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdiplt")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "ymin")
+    '("double" "xmax")
+    '("double" "ymax")
+  )
+)
+
+(define-method plsdiplz
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsdiplz")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "ymin")
+    '("double" "xmax")
+    '("double" "ymax")
+  )
+)
+
+(define-method plsesc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsesc")
+  (return-type "none")
+  (parameters
+    '("char" "esc")
+  )
+)
+
+(define-method plsfam
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsfam")
+  (return-type "none")
+  (parameters
+    '("long" "fam")
+    '("long" "num")
+    '("long" "bmax")
+  )
+)
+
+(define-method plsfci
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsfci")
+  (return-type "none")
+  (parameters
+    '("PLUNICODE" "fci")
+  )
+)
+
+(define-method plsfnam
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsfnam")
+  (return-type "none")
+  (parameters
+    '("const-char*" "fnam")
+  )
+)
+
+(define-method plshade
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plshade")
+  (return-type "none")
+  (parameters
+    '("double**" "a")
+    '("long" "nx")
+    '("long" "ny")
+    '("long-(*" "defined")
+  )
+)
+
+(define-method plshade1
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plshade1")
+  (return-type "none")
+  (parameters
+    '("double*" "a")
+    '("long" "nx")
+    '("long" "ny")
+    '("long-(*" "defined")
+  )
+)
+
+(define-method plshades
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plshades")
+  (return-type "none")
+  (parameters
+    '("double**" "a")
+    '("long" "nx")
+    '("long" "ny")
+    '("long-(*" "defined")
+  )
+)
+
+(define-method plfshade
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plfshade")
+  (return-type "none")
+  (parameters
+    '("double-(*" "f2eval")
+  )
+)
+
+(define-method plsmaj
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsmaj")
+  (return-type "none")
+  (parameters
+    '("double" "def")
+    '("double" "scale")
+  )
+)
+
+(define-method plsmem
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsmem")
+  (return-type "none")
+  (parameters
+    '("long" "maxx")
+    '("long" "maxy")
+    '("void*" "plotmem")
+  )
+)
+
+(define-method plsmin
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsmin")
+  (return-type "none")
+  (parameters
+    '("double" "def")
+    '("double" "scale")
+  )
+)
+
+(define-method plsori
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsori")
+  (return-type "none")
+  (parameters
+    '("long" "ori")
+  )
+)
+
+(define-method plspage
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plspage")
+  (return-type "none")
+  (parameters
+    '("double" "xp")
+    '("double" "yp")
+    '("long" "xleng")
+    '("long" "yleng")
+    '("long" "xoff")
+    '("long" "yoff")
+  )
+)
+
+(define-method plspause
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plspause")
+  (return-type "none")
+  (parameters
+    '("long" "pause")
+  )
+)
+
+(define-method plsstrm
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsstrm")
+  (return-type "none")
+  (parameters
+    '("long" "strm")
+  )
+)
+
+(define-method plssub
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plssub")
+  (return-type "none")
+  (parameters
+    '("long" "nx")
+    '("long" "ny")
+  )
+)
+
+(define-method plssym
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plssym")
+  (return-type "none")
+  (parameters
+    '("double" "def")
+    '("double" "scale")
+  )
+)
+
+(define-method plstar
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstar")
+  (return-type "none")
+  (parameters
+    '("long" "nx")
+    '("long" "ny")
+  )
+)
+
+(define-method plstart
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstart")
+  (return-type "none")
+  (parameters
+    '("const-char*" "devname")
+    '("long" "nx")
+    '("long" "ny")
+  )
+)
+
+(define-method plstripa
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstripa")
+  (return-type "none")
+  (parameters
+    '("long" "id")
+    '("long" "pen")
+    '("double" "x")
+    '("double" "y")
+  )
+)
+
+(define-method plstripc
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstripc")
+  (return-type "none")
+  (parameters
+    '("long*" "id")
+    '("char*" "xspec")
+    '("char*" "yspec")
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "xjump")
+    '("double" "ymin")
+    '("double" "ymax")
+    '("double" "xlpos")
+    '("double" "ylpos")
+    '("long" "y_ascl")
+    '("long" "acc")
+    '("long" "colbox")
+    '("long" "collab")
+    '("long[]" "colline")
+    '("long[]" "styline")
+    '("char*[]" "legline")
+    '("char*" "labx")
+    '("char*" "laby")
+    '("char*" "labtop")
+  )
+)
+
+(define-method plstripd
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstripd")
+  (return-type "none")
+  (parameters
+    '("long" "id")
+  )
+)
+
+(define-method plimage
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plimage")
+  (return-type "none")
+  (parameters
+    '("double**" "data")
+    '("long" "nx")
+    '("long" "ny")
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+    '("double" "zmin")
+    '("double" "zmax")
+    '("double" "Dxmin")
+    '("double" "Dxmax")
+    '("double" "Dymin")
+    '("double" "Dymax")
+  )
+)
+
+(define-method plstyl
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plstyl")
+  (return-type "none")
+  (parameters
+    '("long" "nms")
+    '("long*" "mark")
+    '("long*" "space")
+  )
+)
+
+(define-method plsurf3d
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsurf3d")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("double*" "clevel")
+    '("long" "nlevel")
+  )
+)
+
+(define-method plsurf3dl
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsurf3dl")
+  (return-type "none")
+  (parameters
+    '("double*" "x")
+    '("double*" "y")
+    '("double**" "z")
+    '("long" "nx")
+    '("long" "ny")
+    '("long" "opt")
+    '("double*" "clevel")
+    '("long" "nlevel")
+    '("long" "ixstart")
+    '("long" "ixn")
+    '("long*" "indexymin")
+    '("long*" "indexymax")
+  )
+)
+
+(define-method plsvpa
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsvpa")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+  )
+)
+
+(define-method plsxax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsxax")
+  (return-type "none")
+  (parameters
+    '("long" "digmax")
+    '("long" "digits")
+  )
+)
+
+(define-method plsxwin
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsxwin")
+  (return-type "none")
+  (parameters
+    '("long" "window_id")
+  )
+)
+
+(define-method plsyax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsyax")
+  (return-type "none")
+  (parameters
+    '("long" "digmax")
+    '("long" "digits")
+  )
+)
+
+(define-method plsym
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plsym")
+  (return-type "none")
+  (parameters
+    '("long" "n")
+    '("double*" "x")
+    '("double*" "y")
+    '("long" "code")
+  )
+)
+
+(define-method plszax
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plszax")
+  (return-type "none")
+  (parameters
+    '("long" "digmax")
+    '("long" "digits")
+  )
+)
+
+(define-method pltext
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_pltext")
+  (return-type "none")
+)
+
+(define-method plvasp
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plvasp")
+  (return-type "none")
+  (parameters
+    '("double" "aspect")
+  )
+)
+
+(define-method plvpas
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plvpas")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+    '("double" "aspect")
+  )
+)
+
+(define-method plvpor
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plvpor")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+  )
+)
+
+(define-method plvsta
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plvsta")
+  (return-type "none")
+)
+
+(define-method plw3d
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plw3d")
+  (return-type "none")
+  (parameters
+    '("double" "basex")
+    '("double" "basey")
+    '("double" "height")
+    '("double" "xmin0")
+    '("double" "xmax0")
+    '("double" "ymin0")
+    '("double" "ymax0")
+    '("double" "zmin0")
+    '("double" "zmax0")
+    '("double" "alt")
+    '("double" "az")
+  )
+)
+
+(define-method plwid
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plwid")
+  (return-type "none")
+  (parameters
+    '("long" "width")
+  )
+)
+
+(define-method plwind
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plwind")
+  (return-type "none")
+  (parameters
+    '("double" "xmin")
+    '("double" "xmax")
+    '("double" "ymin")
+    '("double" "ymax")
+  )
+)
+
+(define-method plxormod
+  (of-object "PlplotCanvas")
+  (c-name "plplot_canvas_plxormod")
+  (return-type "none")
+  (parameters
+    '("long" "mode")
+    '("long*" "status")
+  )
+)
+
+

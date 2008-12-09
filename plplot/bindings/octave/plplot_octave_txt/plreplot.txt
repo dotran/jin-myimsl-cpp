@@ -1,0 +1,11 @@
+
+plreplot: Replays contents of plot buffer to
+current device/file 
+
+DESCRIPTION:
+
+    Replays contents of plot buffer to current device/file. 
+
+SYNOPSIS:
+
+plreplot()

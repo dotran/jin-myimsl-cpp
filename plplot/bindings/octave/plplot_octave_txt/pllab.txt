@@ -1,0 +1,18 @@
+
+pllab: Simple routine to write labels 
+
+DESCRIPTION:
+
+    Routine for writing simple labels. Use plmtex for more complex labels. 
+
+SYNOPSIS:
+
+pllab(xlabel, ylabel, tlabel)
+
+ARGUMENTS:
+
+    xlabel (const char *, input) :    Label for horizontal axis. 
+
+    ylabel (const char *, input) :    Label for vertical axis. 
+
+    tlabel (const char *, input) :    Title of graph. 

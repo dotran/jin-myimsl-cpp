@@ -1,0 +1,74 @@
+
+plenv0: Same as plenv but if in multiplot mode does not advance the subpage, instead clears it. 
+
+DESCRIPTION:
+
+    Sets up plotter environment for simple graphs by calling pladv and
+    setting up viewport and window to sensible default values.	plenv0
+    leaves enough room around most graphs for axis labels and a title.
+    When these defaults are not suitable, use the individual routines
+    plvpas, plvpor, or plvasp for setting up the viewport, plwind for
+    defining the window, and plbox for drawing the box. 
+
+SYNOPSIS:
+
+plenv0(xmin, xmax, ymin, ymax, just, axis)
+
+ARGUMENTS:
+
+    xmin (PLFLT, input) :    Value of x at left-hand edge of window (in
+    world coordinates). 
+
+    xmax (PLFLT, input) :    Value of x at right-hand edge of window (in
+    world coordinates). 
+
+    ymin (PLFLT, input) :    Value of y at bottom edge of window (in world
+    coordinates). 
+
+    ymax (PLFLT, input) :    Value of y at top edge of window (in world
+    coordinates). 
+
+    just (PLINT, input) :    Controls how the axes will be scaled: -1: the
+    scales will not be set, the user must set up the scale before
+    calling plenv0 using plsvpa, plvasp or other. 
+        0: the x and y axes are scaled independently to use as much of
+        the screen as possible. 
+        1: the scales of the x and y axes are made equal. 
+        2: the axis of the x and y axes are made equal, and the plot
+        box will be square. 
+
+
+    axis (PLINT, input) :    Controls drawing of the box around the plot:
+    -2: draw no box, no tick marks, no
+    numeric tick labels, no axes. 
+        -1: draw box only. 
+        0: draw box, ticks, and numeric tick labels. 
+        1: also draw coordinate axes at x=0 and y=0. 
+        2: also draw a grid at major tick
+    positions in both coordinates. 
+        3: also draw a grid at minor tick
+    positions in both coordinates. 
+        10: same as 0 except logarithmic x tick marks. (The x data
+        have to be converted to logarithms separately.) 
+        11: same as 1 except logarithmic x tick marks. (The x data
+        have to be converted to logarithms separately.) 
+        12: same as 2 except logarithmic x tick marks. (The x data
+        have to be converted to logarithms separately.) 
+        13: same as 3 except logarithmic x tick marks. (The x data
+        have to be converted to logarithms separately.) 
+        20: same as 0 except logarithmic y tick marks. (The y data
+        have to be converted to logarithms separately.) 
+        21: same as 1 except logarithmic y tick marks. (The y data
+        have to be converted to logarithms separately.) 
+        22: same as 2 except logarithmic y tick marks. (The y data
+        have to be converted to logarithms separately.) 
+        23: same as 3 except logarithmic y tick marks. (The y data
+        have to be converted to logarithms separately.) 
+        30: same as 0 except logarithmic x and y tick marks. (The x
+        and y data have to be converted to logarithms separately.) 
+        31: same as 1 except logarithmic x and y tick marks. (The x
+        and y data have to be converted to logarithms separately.) 
+        32: same as 2 except logarithmic x and y tick marks. (The x
+        and y data have to be converted to logarithms separately.) 
+        33: same as 3 except logarithmic x and y tick marks. (The x
+        and y data have to be converted to logarithms separately.) 

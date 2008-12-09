@@ -1,0 +1,26 @@
+
+plsdidev: Set parameters that define current device-space window 
+
+DESCRIPTION:
+
+    Set relative margin width, aspect ratio, and relative justification
+    that define current device-space window.  If you want to just use the
+    previous value for any of these, just pass in the magic value
+    PL_NOTSET. It is unlikely that one should ever need to change the
+    aspect ratio but it's in there for completeness. If plsdidev is not
+    called the default values of mar, jx, and jy are all 0. aspect is set
+    to a device-specific value. 
+
+SYNOPSIS:
+
+plsdidev(mar, aspect, jx, jy)
+
+ARGUMENTS:
+
+    mar (PLFLT, input) :    Relative margin width. 
+
+    aspect (PLFLT, input) :    Aspect ratio. 
+
+    jx (PLFLT, input) :    Relative justification in x. 
+
+    jy (PLFLT, input) :    Relative justification in y. 

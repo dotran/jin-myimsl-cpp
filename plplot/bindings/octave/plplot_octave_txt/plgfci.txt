@@ -1,0 +1,16 @@
+
+plgfci: Get FCI (font characterization integer) 
+
+DESCRIPTION:
+
+    Gets information about the current font using the FCI approach. See
+    the PLplot documentation for more information. 
+
+SYNOPSIS:
+
+plgfci(fci)
+
+ARGUMENTS:
+
+    fci (PLUNICODE *, output) :    Pointer to PLUNICODE (unsigned 32-bit
+    integer) variable which is updated with current FCI value. 

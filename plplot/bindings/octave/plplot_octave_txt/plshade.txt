@@ -1,0 +1,57 @@
+
+plshade:  Shade individual region on the basis of value 
+
+DESCRIPTION:
+
+    Shade individual region on the basis of value.  Use plshades if you
+    want to shade a number of regions using continuous colors. plshade is
+    identical to plshade1 except for the type of the first parameter. See
+    plshade1 for further discussion. 
+
+SYNOPSIS:
+
+plshade(a, nx, ny, defined, xmin, xmax, ymin, ymax, shade_min, shade_max, sh_cmap, sh_color, sh_width, min_color, min_width, max_color, max_width, fill, rectangular, pltr, pltr_data)
+
+ARGUMENTS:
+
+    a (PLFLT **, input) :    
+
+    nx (PLINT, input) :    
+
+    ny (PLINT, input) :    
+
+    defined (PLINT (*) (PLFLT, PLFLT), input) :    
+
+    xmin (PLFLT, input) :    
+
+    xmax (PLFLT, input) :    
+
+    ymin (PLFLT, input) :    
+
+    ymax (PLFLT, input) :    
+
+    shade_min (PLFLT, input) :      
+
+    shade_max (PLFLT, input) :      
+
+    sh_cmap (PLINT, input) :    
+
+    sh_color (PLFLT, input) :     
+
+    sh_width (PLINT, input) :     
+
+    min_color (PLINT, input) :      
+
+    min_width (PLINT, input) :      
+
+    max_color (PLINT, input) :      
+
+    max_width (PLINT, input) :      
+
+    fill (void (*) (PLINT, PLFLT *, PLFLT *), input) :      
+
+    rectangular (PLINT, input) :    
+
+    pltr (void (*) (PLFLT, PLFLT, PLFLT *, PLFLT *, PLPointer) , input) :  
+
+    pltr_data (PLPointer, input) :    

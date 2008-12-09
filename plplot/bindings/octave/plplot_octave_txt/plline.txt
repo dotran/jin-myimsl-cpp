@@ -1,0 +1,18 @@
+
+plline: Draw a line 
+
+DESCRIPTION:
+
+    Draws line defined by n points in x and y. 
+
+SYNOPSIS:
+
+plline(n, x, y)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of points defining line. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of points. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of points. 

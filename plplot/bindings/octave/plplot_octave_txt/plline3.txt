@@ -1,0 +1,23 @@
+
+plline3: Draw a line in 3 space 
+
+DESCRIPTION:
+
+    Draws line in 3 space defined by n points in x, y, and z. You must
+    first set up the viewport, the 2d viewing window (in world
+    coordinates), and the 3d normalized coordinate box.  See x18c.c for
+    more info. 
+
+SYNOPSIS:
+
+plline3(n, x, y, z)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of points defining line. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of points. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of points. 
+
+    z (PLFLT *, input) :    Pointer to array with z coordinates of points. 

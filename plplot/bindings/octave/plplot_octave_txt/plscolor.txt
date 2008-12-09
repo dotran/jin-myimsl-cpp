@@ -1,0 +1,16 @@
+
+plscolor: Used to globally turn color output on/off 
+
+DESCRIPTION:
+
+    Used to globally turn color output on/off for those drivers/devices
+    that support it. 
+
+SYNOPSIS:
+
+plscolor(color)
+
+ARGUMENTS:
+
+    color (PLINT, input) :    Color flag (Boolean).  If zero, color is
+    turned off.  If non-zero, color is turned on. 

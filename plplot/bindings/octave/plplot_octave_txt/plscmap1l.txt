@@ -1,0 +1,35 @@
+
+plscmap1l: Set color map1 colors using a
+piece-wise linear relationship 
+
+DESCRIPTION:
+
+    Bounds on coordinatesRGBR[0, 1]magnitudeRGBG[0, 1]magnitudeRGBB[0,
+    1]magnitudeHLShue[0, 360]degreesHLSlightness[0,
+    1]magnitudeHLSsaturation[0, 1]magnitude
+
+SYNOPSIS:
+
+plscmap1l(itype, npts, pos, coord1, coord2, coord3, rev)
+
+ARGUMENTS:
+
+    itype (PLINT, input) :    0: HLS, 1: RGB 
+
+    npts (PLINT, input) :    number of control points 
+
+    pos (PLFLT *, input) :    position for each control point (between 0.0
+    and 1.0, in ascending order) 
+
+    coord1 (PLFLT *, input) :     first coordinate (H or R) for each
+    control point 
+
+    coord2 (PLFLT *, input) :     second coordinate (L or G) for each
+    control point 
+
+    coord3 (PLFLT *, input) :     third coordinate (S or B) for each
+    control point 
+
+    rev (PLINT *, input) :    reverse flag for each control point (rev[i]
+    refers to the interpolation interval between the i and i + 1
+    control points). 

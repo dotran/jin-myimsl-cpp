@@ -1,0 +1,20 @@
+
+plsdiori: Set plot orientation 
+
+DESCRIPTION:
+
+    Set plot orientation parameter which is multiplied by 90 degrees to
+    obtain the angle of rotation.  Note, arbitrary rotation parameters
+    such as 0.2 (corresponding to 18 degrees) are possible, but the usual
+    values for the rotation parameter are 0., 1., 2., and 3. corresponding
+    to 0 degrees (landscape mode), 90 degrees (portrait mode), 180 degrees
+    (seascape mode), and 270 degrees (upside-down mode). If plsdiori is
+    not called the default value of rot is 0. 
+
+SYNOPSIS:
+
+plsdiori(rot)
+
+ARGUMENTS:
+
+    rot (PLFLT, input) :    Plot orientation parameter. 

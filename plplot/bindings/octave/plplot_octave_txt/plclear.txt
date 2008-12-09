@@ -1,0 +1,15 @@
+
+plclear: Clear current (sub)page 
+
+DESCRIPTION:
+
+    Clears the current page, effectively erasing everything that have been
+    drawn.  This command only works with interactive drivers; if the
+    driver does not support this, the page is filled with the background
+    color in use. If the current page is divided into subpages, only the
+    current subpage is erased.	The nth subpage can be selected with
+    pladv(n). 
+
+SYNOPSIS:
+
+plclear()

@@ -1,0 +1,54 @@
+
+plmeshc: Magnitude colored plot surface mesh with contour. 
+
+DESCRIPTION:
+
+    Identical to plmesh but with extra functionalities: the surface mesh
+    can be colored accordingly to the current z value being plotted, a
+    contour plot can be drawn at the base XY plane, and a curtain can be
+    drawn between the plotted function border and the base XY plane. 
+
+SYNOPSIS:
+
+plmeshc(x, y, z, nx, ny, opt, clevel, nlevel)
+
+ARGUMENTS:
+
+    x (PLFLT *, input) :    Pointer to set of x coordinate values at which
+    the function is evaluated. 
+
+    y (PLFLT *, input) :    Pointer to set of y coordinate values at which
+    the function is evaluated. 
+
+    z (PLFLT **, input) :    Pointer to a vectored two-dimensional array
+    with set of function values. 
+
+    nx (PLINT, input) :    Number of x values at which function is
+    evaluated. 
+
+    ny (PLINT, input) :    Number of y values at which function is
+    evaluated. 
+
+    opt (PLINT, input) :    Determines the way in which the surface is
+    represented. To specify more than one option just add the options,
+    e.g. DRAW_LINEXY + MAG_COLOR opt=DRAW_LINEX: Lines are drawn
+    showing z as a function of x for each value of y[j]. 
+        opt=DRAW_LINEY: Lines are drawn showing z as a function of y
+        for each value of x[i]. 
+        opt=DRAW_LINEXY: Network of lines is drawn connecting points
+        at which function is defined. 
+        opt=MAG_COLOR: Each line in the mesh is colored according to
+        the z value being plotted. The color is used from the current
+        colormap 1. 
+        opt=BASE_CONT: A contour plot is drawn at the base XY plane
+        using parameters 
+    nlevel and 
+    clevel. 
+        opt=DRAW_SIDES: draws a curtain between the base XY plane and
+        the borders of the plotted function. 
+
+
+    clevel (PLFLT *, input) :     Pointer to the array that defines the
+    contour level spacing. 
+
+    nlevel (PLINT, input) :    Number of elements in the clevel array. 

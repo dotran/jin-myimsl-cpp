@@ -1,0 +1,27 @@
+
+plfill3: Draw filled polygon in 3D 
+
+DESCRIPTION:
+
+    Fills the 3D polygon defined by the n points in the x, y, and z arrays
+    using the pattern defined by plpsty or plpat.  The routine will
+    automatically close the polygon between the last and first vertices. 
+    If multiple closed polygons are passed in x, y, and z then plfill3
+    will fill in between them. 
+
+SYNOPSIS:
+
+plfill3(n, x, y, z)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of vertices in polygon. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of
+    vertices. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of
+    vertices. 
+
+    z (PLFLT *, input) :    Pointer to array with z coordinates of
+    vertices. 

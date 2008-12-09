@@ -1,0 +1,22 @@
+
+plgyax: Get y axis parameters 
+
+DESCRIPTION:
+
+    Identical to plgxax, except that arguments are flags for y axis. See
+    the description of plgxax for more detail. 
+
+SYNOPSIS:
+
+plgyax(digmax, digits)
+
+ARGUMENTS:
+
+    digmax (PLINT *, output) :      Pointer to variable with the maximum
+    number of digits for the y axis.  If nonzero, the printed label
+    has been switched to a floating point representation when the
+    number of digits exceeds digmax. 
+
+    digits (PLINT *, output) :      Pointer to variable with the actual
+    number of digits for the numeric labels (y axis) from the last
+    plot. 

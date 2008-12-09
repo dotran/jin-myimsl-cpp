@@ -1,0 +1,28 @@
+
+plsdimap: Set up transformation from metafile
+coordinates 
+
+DESCRIPTION:
+
+    Set up transformation from metafile coordinates.  The size of the plot
+    is scaled so as to preserve aspect ratio.  This isn't intended to be a
+    general-purpose facility just yet (not sure why the user would need
+    it, for one). 
+
+SYNOPSIS:
+
+plsdimap(dimxmin, dimxmax, dimymin, dimymax, dimxpmm, dimypmm)
+
+ARGUMENTS:
+
+    dimxmin (PLINT, input) :    NEEDS DOCUMENTATION 
+
+    dimxmax (PLINT, input) :    NEEDS DOCUMENTATION 
+
+    dimymin (PLINT, input) :    NEEDS DOCUMENTATION 
+
+    dimymax (PLINT, input) :    NEEDS DOCUMENTATION 
+
+    dimxpmm (PLFLT, input) :    NEEDS DOCUMENTATION 
+
+    dimypmm (PLFLT, input) :    NEEDS DOCUMENTATION 

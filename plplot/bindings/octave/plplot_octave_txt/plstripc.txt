@@ -1,0 +1,62 @@
+
+plstripc: Create a 4-pen stripchart 
+
+DESCRIPTION:
+
+    Create a 4-pen stripchart, to be used afterwards by plstripa
+
+SYNOPSIS:
+
+plstripc(id, xspec, yspec, xmin, xmax, xjump, ymin, ymax, xlpos, ylpos, y_ascl, acc, colbox, collab, colline, styline, legline[], labx, laby, labtop)
+
+ARGUMENTS:
+
+    id (PLINT *, output) :    Identification number of stripchart to use
+    on plstripa and plstripd. 
+
+    xspec (char *, input) :    X-axis specification as in plbox. 
+
+    yspec (char *, input) :    Y-axis specification as in plbox. 
+
+    xmin (PLFLT, input) :    Initial coordinates of plot box; they will
+    change as data are added. 
+
+    xmax (PLFLT, input) :    Initial coordinates of plot box; they will
+    change as data are added. 
+
+    xjump (PLFLT, input) :    When x attains xmax, the length of the plot
+    is multiplied by the factor (1 + 
+    xjump). 
+
+    ymin (PLFLT, input) :    Initial coordinates of plot box; they will
+    change as data are added. 
+
+    ymax (PLFLT, input) :    Initial coordinates of plot box; they will
+    change as data are added. 
+
+    xlpos (PLFLT, input) :    X legend box position (range from 0 to 1). 
+
+    ylpos (PLFLT, input) :    Y legend box position (range from 0 to 1). 
+
+    y_ascl (PLINT, input) :    Autoscale y between x jumps (1) or not (0). 
+
+    acc (PLINT, input) :    Accumulate strip plot (1) or slide (0). 
+
+    colbox (PLINT, input) :    Plot box color index (cmap0). 
+
+    collab (PLINT, input) :    Legend color index (cmap0). 
+
+    colline (PLINT *, input) :      Pointer to array with color indices
+    (cmap0) for the 4 pens. 
+
+    styline (PLINT *, input) :      Pointer to array with line styles for
+    the 4 pens. 
+
+    legline (char **, input) :      Pointer to character array containing
+    legends for the 4 pens. 
+
+    labx (char *, input) :    X-axis label. 
+
+    laby (char *, input) :    Y-axis label. 
+
+    labtop (char *, input) :    Plot title. 

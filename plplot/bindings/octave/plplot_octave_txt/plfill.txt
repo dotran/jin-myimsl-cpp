@@ -1,0 +1,25 @@
+
+plfill: Draw filled polygon 
+
+DESCRIPTION:
+
+    Fills the polygon defined by the n points (
+    x[i], 
+    y[i]) using the pattern defined by plpsty or plpat.  The routine will
+    automatically close the polygon between the last and first vertices. 
+    If multiple closed polygons are passed in x and y then plfill will
+    fill in between them. 
+
+SYNOPSIS:
+
+plfill(n, x, y)
+
+ARGUMENTS:
+
+    n (PLINT, input) :      Number of vertices in polygon. 
+
+    x (PLFLT *, input) :    Pointer to array with x coordinates of
+    vertices. 
+
+    y (PLFLT *, input) :    Pointer to array with y coordinates of
+    vertices. 

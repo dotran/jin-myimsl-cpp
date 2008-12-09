@@ -1,0 +1,18 @@
+
+plcol1: Set color, map1 
+
+DESCRIPTION:
+
+    Sets the color for color map1 (see the PLplot documentation).  
+
+SYNOPSIS:
+
+plcol1(col1)
+
+ARGUMENTS:
+
+    col1 (PLFLT, input) :    This value must be in the range from 0. to 1.
+    and is mapped to color using the continuous map1 color palette
+    which by default ranges from blue to the background color to red. 
+    The map1 palette can also be straightforwardly changed by the user
+    with plscmap1 or plscmap1l. 

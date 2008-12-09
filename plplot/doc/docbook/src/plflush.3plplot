@@ -1,0 +1,17 @@
+.\" This page was automatically generated.  Do not edit!
+.\" 
+.TH PLFLUSH 3plplot  "May, 2005" "" "PLplot API"
+.SH NAME
+\fBplflush\fP - Flushes the output stream 
+.SH SYNOPSIS
+\fBplflush\fP()
+.SH DESCRIPTION
+
+.P
+Flushes the output stream. Use sparingly, if at all. 
+.SH AUTHORS
+Geoffrey Furnish and Maurice LeBrun wrote and maintain PLplot.  This man page
+was automatically generated from the DocBook source of the PLplot
+documentation, maintained by Alan W. Irwin and Rafael Laboissiere.
+.SH SEE ALSO
+PLplot documentation at http://plplot.sf.net/resources.

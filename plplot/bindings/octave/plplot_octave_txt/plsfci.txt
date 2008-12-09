@@ -1,0 +1,17 @@
+
+plsfci: Set FCI (font characterization integer) 
+
+DESCRIPTION:
+
+    Sets font characteristics to be used at the start of the next string
+    using the FCI approach. See the PLplot documentation for more
+    information. 
+
+SYNOPSIS:
+
+plsfci(fci)
+
+ARGUMENTS:
+
+    fci (PLUNICODE, input) :    PLUNICODE (unsigned 32-bit integer) value
+    of FCI. 

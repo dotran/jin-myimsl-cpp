@@ -1,0 +1,20 @@
+
+plcol0: Set color, map0 
+
+DESCRIPTION:
+
+    Sets the color for color map0 (see the PLplot documentation). 
+
+SYNOPSIS:
+
+plcol0(color)
+
+ARGUMENTS:
+
+    color (PLINT, input) :    Integer representing the color.  The
+    defaults at present are (these may change): 0 1 2 3 4 5 6 7 8 9 10
+    11 12 13 14 15 black (default background)red (default
+    foreground)yellowgreenaquamarinepinkwheatgreybrownblueBlueVioletcy
+    anturquoisemagentasalmonwhite Use plscmap0 to change the entire
+    map0 color palette and plscol0 to change an individual color in
+    the map0 color palette. 

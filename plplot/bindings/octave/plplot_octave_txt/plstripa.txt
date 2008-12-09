@@ -1,0 +1,23 @@
+
+plstripa: Add a point to a stripchart 
+
+DESCRIPTION:
+
+    Add a point to a given pen of a given stripchart. There is no need for
+    all pens to have the same number of points or to be equally sampled in
+    the x coordinate. Allocates memory and rescales as necessary. 
+
+SYNOPSIS:
+
+plstripa(id, p, x, y)
+
+ARGUMENTS:
+
+    id (PLINT, input) :    Identification number (set up in plstripc) of
+    the stripchart. 
+
+    p (PLINT, input) :      Pen number (ranges from 0 to 3). 
+
+    x (PLFLT, input) :      X coordinate of point to plot. 
+
+    y (PLFLT, input) :      Y coordinate of point to plot. 

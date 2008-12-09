@@ -1,0 +1,26 @@
+
+plscmap0: Set color map0 colors by 8-bit RGB
+values 
+
+DESCRIPTION:
+
+    Set color map0 colors using 8-bit RGB values (see the PLplot
+    documentation).  This sets the entire color map -- only as many colors
+    as specified will be allocated. 
+
+SYNOPSIS:
+
+plscmap0(r, g, b, ncol0)
+
+ARGUMENTS:
+
+    r (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of red in the color. 
+
+    g (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of green in the color. 
+
+    b (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of blue in the color. 
+
+    ncol0 (PLINT, input) :    Number of items in the r, g, and b arrays. 

@@ -1,0 +1,16 @@
+
+plspause: Set the pause (on end-of-page) status 
+
+DESCRIPTION:
+
+    Set the pause (on end-of-page) status. 
+
+SYNOPSIS:
+
+plspause(pause)
+
+ARGUMENTS:
+
+    pause (PLINT, input) :    If pause = 1 there will be a pause on
+    end-of-page for those drivers which support this.  Otherwise there
+    is no pause. 

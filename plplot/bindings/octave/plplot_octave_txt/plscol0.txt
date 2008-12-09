@@ -1,0 +1,29 @@
+
+plscol0:  Set a given color from color map0 by 8
+bit RGB value 
+
+DESCRIPTION:
+
+    Set a given color by 8-bit RGB value for color map0 (see the PLplot
+    documentation).  Overwrites the previous color value for the given
+    index and, thus, does not result in any additional allocation of space
+    for colors. 
+
+SYNOPSIS:
+
+plscol0(icol0, r, g, b)
+
+ARGUMENTS:
+
+    icol0 (PLINT, input) :    Color index.  Must be less than the maximum
+    number of colors (which is set by default, by plscmap0n, or even
+    by plscmap0). 
+
+    r (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of red in the color. 
+
+    g (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of green in the color. 
+
+    b (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of blue in the color. 

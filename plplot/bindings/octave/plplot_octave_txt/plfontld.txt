@@ -1,0 +1,17 @@
+
+plfontld: Load character font 
+
+DESCRIPTION:
+
+    Sets the character set to use for subsequent character drawing.  May
+    be called before calling initializing PLplot. 
+
+SYNOPSIS:
+
+plfontld(set)
+
+ARGUMENTS:
+
+    set (PLINT, input) :    Specifies the character set to load: 0:
+    Standard character set 
+        1: Extended character set 

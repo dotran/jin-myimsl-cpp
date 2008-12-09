@@ -1,0 +1,111 @@
+
+plshade1: Shade individual region on the basis of value 
+
+DESCRIPTION:
+
+    Shade individual region on the basis of value.  Use plshades if you
+    want to shade a number of contiguous regions using continuous colors. 
+    In particular the edge contours are treated properly in plshades. If
+    you attempt to do contiguous regions with plshade1 (or plshade) the
+    contours at the edge of the shade are partially obliterated by
+    subsequent plots of contiguous shaded regions. plshade1 differs from
+    plshade by the type of the first argument.	Look at the argument list
+    below, plcont and the PLplot documentation for more information about
+    the transformation from grid to world coordinates.	Shading NEEDS
+    DOCUMENTATION, but as a stopgap look at how plshade is used in
+    examples/c/x15c.c
+
+SYNOPSIS:
+
+plshade1(a, nx, ny, defined, xmin, xmax, ymin, ymax, shade_min, shade_max, sh_cmap, sh_color, sh_width, min_color, min_width, max_color, max_width, fill, rectangular, pltr, pltr_data)
+
+ARGUMENTS:
+
+    a (PLFLT *, input) :    Contains array to be plotted. The array must
+    have been declared as PLFLT a[nx][ny]. 
+
+    nx (PLINT, input) :    First dimension of array "a". 
+
+    ny (PLINT, input) :    Second dimension of array "a". 
+
+    defined (PLINT (*) (PLFLT, PLFLT), input) :    User function
+    specifying regions excluded from the shading plot.  This function
+    accepts x and y coordinates as input arguments and must return 0
+    if the point is in the excluded region or 1 otherwise. This
+    argument can be NULL if all the values are valid. 
+
+    xmin (PLFLT, input) :    Defines the "grid" coordinates.  The data
+    a[0][0] has a position of (xmin,ymin), a[nx-1][0] has a position
+    at (xmax,ymin) and so on. 
+
+    xmax (PLFLT, input) :    Defines the "grid" coordinates.  The data
+    a[0][0] has a position of (xmin,ymin), a[nx-1][0] has a position
+    at (xmax,ymin) and so on. 
+
+    ymin (PLFLT, input) :    Defines the "grid" coordinates.  The data
+    a[0][0] has a position of (xmin,ymin), a[nx-1][0] has a position
+    at (xmax,ymin) and so on. 
+
+    ymax (PLFLT, input) :    Defines the "grid" coordinates.  The data
+    a[0][0] has a position of (xmin,ymin), a[nx-1][0] has a position
+    at (xmax,ymin) and so on. 
+
+    shade_min (PLFLT, input) :      Defines the lower end of the interval to
+    be shaded. If shade_max <= shade_min, plshade1 does nothing. 
+
+    shade_max (PLFLT, input) :      Defines the upper end of the interval to
+    be shaded. If shade_max <= shade_min, plshade1 does nothing. 
+
+    sh_cmap (PLINT, input) :    Defines color map. 
+
+    sh_color (PLFLT, input) :     Defines color map index if cmap0 or color
+    map input value (ranging from 0. to 1.) if cmap1. 
+
+    sh_width (PLINT, input) :     Defines width used by the fill pattern. 
+
+    min_color (PLINT, input) :      Defines pen color, width used by the
+    boundary of shaded region. The min values are used for the
+    shade_min boundary, and the max values are used on the shade_max
+    boundary.  Set color and width to zero for no plotted boundaries. 
+
+    min_width (PLINT, input) :      Defines pen color, width used by the
+    boundary of shaded region. The min values are used for the
+    shade_min boundary, and the max values are used on the shade_max
+    boundary.  Set color and width to zero for no plotted boundaries. 
+
+    max_color (PLINT, input) :      Defines pen color, width used by the
+    boundary of shaded region. The min values are used for the
+    shade_min boundary, and the max values are used on the shade_max
+    boundary.  Set color and width to zero for no plotted boundaries. 
+
+    max_width (PLINT, input) :      Defines pen color, width used by the
+    boundary of shaded region. The min values are used for the
+    shade_min boundary, and the max values are used on the shade_max
+    boundary.  Set color and width to zero for no plotted boundaries. 
+
+    fill (void (*) (PLINT, PLFLT *, PLFLT *), input) :      Routine used to
+    fill the region.  Use plfill.  Future version of plplot may have
+    other fill routines. 
+
+    rectangular (PLINT, input) :    Set rectangular to 1 if rectangles map
+    to rectangles after coordinate transformation with pltrl. 
+    Otherwise, set rectangular to 0. If rectangular is set to 1,
+    plshade tries to save time by filling large rectangles.  This
+    optimization fails if the coordinate transformation distorts the
+    shape of rectangles. For example a plot in polor coordinates has
+    to have rectangular set to 0. 
+
+    pltr (void (*) (PLFLT, PLFLT, PLFLT *, PLFLT *, PLPointer) , input) : 
+      Pointer to function that defines transformation between indices
+    in array z and the world coordinates (C only).    Transformation
+    functions are provided in the PLplot library: pltr0 for identity
+    mapping, and pltr1 and pltr2 for arbitrary mappings respectively
+    defined by one- and two-dimensional arrays.  In addition,
+    user-supplied routines for the transformation can be used as well.
+     Examples of all of these approaches are given in the PLplot
+    documentation. The transformation function should have the form
+    given by any of pltr0, pltr1, or pltr2. 
+
+    pltr_data (PLPointer, input) :    Extra parameter to help pass
+    information to pltr0, pltr1, pltr2, or whatever routine that is
+    externally supplied. 

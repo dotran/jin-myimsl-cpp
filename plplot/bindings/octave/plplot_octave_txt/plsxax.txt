@@ -1,0 +1,23 @@
+
+plsxax: Set x axis parameters 
+
+DESCRIPTION:
+
+    Sets values of the digmax and digits flags for the x axis.	See the
+    PLplot documentation for more information. 
+
+SYNOPSIS:
+
+plsxax(digmax, digits)
+
+ARGUMENTS:
+
+    digmax (PLINT, input) :    Variable to set the maximum number of
+    digits for the x axis.    If nonzero, the printed label will be
+    switched to a floating point representation when the number of
+    digits exceeds digmax. 
+
+    digits (PLINT, input) :    Field digits value.  Currently, changing
+    its value here has no effect since it is set only by plbox or
+    plbox3.  However, the user may obtain its value after a call to
+    either of these functions by calling plgxax. 

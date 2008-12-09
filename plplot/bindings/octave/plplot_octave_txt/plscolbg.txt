@@ -1,0 +1,24 @@
+
+plscolbg: Set the background color
+by 8-bit RGB value 
+
+DESCRIPTION:
+
+    Set the background color (color 0 in color map 0) by 8-bit RGB value
+    (see
+    the PLplot documentation). 
+
+SYNOPSIS:
+
+plscolbg(r, g, b)
+
+ARGUMENTS:
+
+    r (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of red in the color. 
+
+    g (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of green in the color. 
+
+    b (PLINT, input) :      Unsigned 8-bit integer (0-255) representing the
+    degree of blue in the color. 

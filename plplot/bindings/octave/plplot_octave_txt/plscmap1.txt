@@ -1,0 +1,25 @@
+
+plscmap1: Set color map1 colors using 8-bit RGB
+values 
+
+DESCRIPTION:
+
+    Set color map1 colors using 8-bit RGB values (see the PLplot
+    documentation).  This also sets the number of colors. 
+
+SYNOPSIS:
+
+plscmap1(r, g, b, ncol1)
+
+ARGUMENTS:
+
+    r (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of red in the color. 
+
+    g (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of green in the color. 
+
+    b (PLINT *, input) :    Pointer to array with set of unsigned 8-bit
+    integers (0-255) representing the degree of blue in the color. 
+
+    ncol1 (PLINT, input) :    Number of items in the r, g, and b arrays. 

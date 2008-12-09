@@ -1,0 +1,16 @@
+
+plstripd: Deletes and releases memory used by a
+stripchart 
+
+DESCRIPTION:
+
+    Deletes and releases memory used by a stripchart. 
+
+SYNOPSIS:
+
+plstripd(id)
+
+ARGUMENTS:
+
+    id (PLINT, input) :    Identitification number of stripchart to
+    delete. 

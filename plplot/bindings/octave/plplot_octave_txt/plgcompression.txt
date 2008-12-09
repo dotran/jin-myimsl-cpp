@@ -1,0 +1,16 @@
+
+plgcompression: Get the current device-compression setting 
+
+DESCRIPTION:
+
+    Get the current device-compression setting.  This parameter is only
+    used for drivers that provide compression. 
+
+SYNOPSIS:
+
+plgcompression(compression)
+
+ARGUMENTS:
+
+    compression (PLINT *, output) :    Pointer to a variable to be filled
+    with the current device-compression setting. 

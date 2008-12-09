@@ -1,0 +1,18 @@
+
+plgchr: Get character default height and current
+(scaled) height 
+
+DESCRIPTION:
+
+    Get character default height and current (scaled) height. 
+
+SYNOPSIS:
+
+plgchr(p_def, p_ht)
+
+ARGUMENTS:
+
+    p_def (PLFLT *, output) :     Pointer to default character height (mm). 
+
+    p_ht (PLFLT *, output) :    Pointer to current (scaled) character
+    height (mm). 

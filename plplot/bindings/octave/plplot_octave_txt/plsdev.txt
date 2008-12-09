@@ -1,0 +1,15 @@
+
+plsdev: Set the device (keyword) name 
+
+DESCRIPTION:
+
+    Set the device (keyword) name. 
+
+SYNOPSIS:
+
+plsdev(devname)
+
+ARGUMENTS:
+
+    devname (const char *, output) :    Pointer to device (keyword) name
+    string. 

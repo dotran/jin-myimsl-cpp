@@ -1,0 +1,24 @@
+
+plsvect: Set arrow style for vector plots 
+
+DESCRIPTION:
+
+    Set the style for the arrow used by plvect to plot vectors. 
+
+SYNOPSIS:
+
+plsvect(arrowx, arrowy, npts, fill)
+
+ARGUMENTS:
+
+    arrowx, arrowy (PLFLT *,input) :    Pointers to a pair of arrays
+    containing the x and y points which make up the arrow. The arrow
+    is plotted by joining these points to form a polygon. The scaling
+    assumes that the x and y points in the arrow lie in the range -0.5
+    <= x,y <= 0.5. 
+
+    npts (PLINT,input) :    Number of points in the arrays arrowx and
+    arrowy. 
+
+    fill (PLINT,input) :    If fill = 0 then the arrow is open, if fill =
+    1 then the arrow is filled. 

@@ -1,0 +1,22 @@
+
+plgdiplt: Get parameters that define current plot-space window 
+
+DESCRIPTION:
+
+    Get relative minima and maxima that define current plot-space window.
+    If plsdiplt has not been called the default values pointed to by
+    p_xmin, p_ymin, p_xmax, and p_ymax will be 0., 0., 1., and 1. 
+
+SYNOPSIS:
+
+plgdiplt(p_xmin, p_ymin, p_xmax, p_ymax)
+
+ARGUMENTS:
+
+    p_xmin (PLFLT *, output) :      Pointer to relative minimum in x. 
+
+    p_ymin (PLFLT *, output) :      Pointer to relative minimum in y. 
+
+    p_xmax (PLFLT *, output) :      Pointer to relative maximum in x. 
+
+    p_ymax (PLFLT *, output) :      Pointer to relative maximum in y. 

@@ -1,0 +1,16 @@
+
+plvasp: Specify viewport using aspect ratio only 
+
+DESCRIPTION:
+
+    Sets the viewport so that the ratio of the length of the y axis to
+    that of the x axis is equal to aspect. 
+
+SYNOPSIS:
+
+plvasp(aspect)
+
+ARGUMENTS:
+
+    aspect (PLFLT, input) :    Ratio of length of y axis to length of x
+    axis. 

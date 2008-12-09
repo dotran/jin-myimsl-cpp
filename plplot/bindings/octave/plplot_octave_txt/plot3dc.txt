@@ -1,0 +1,16 @@
+
+plot3dc: Magnitude colored plot surface with contour. 
+
+DESCRIPTION:
+
+    Identical to plot3d but with extra functionalities: the surface mesh
+    can be colored accordingly to the current z value being plotted, a
+    contour plot can be drawn at the base XY plane, and a curtain can be
+    drawn between the plotted function border and the base XY plane. The
+    arguments are identical to plmeshc. The only difference between
+    plmeshc and plot3dc is that plmeshc draws the botton side of the
+    surface, while plot3dc only draws the surface as viewed from the top. 
+
+SYNOPSIS:
+
+plot3dc(x, y, z, nx, ny, opt, clevel, nlevel)

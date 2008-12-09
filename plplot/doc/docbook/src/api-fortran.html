@@ -1,0 +1,521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>The Specialized Fortran API for PLplot</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="The PLplot Plotting Library"
+HREF="index.html"><LINK
+REL="UP"
+TITLE=" Reference "
+HREF="p3208.html"><LINK
+REL="PREVIOUS"
+TITLE="
+      pltr2: Linear interpolation for grid to world
+      mapping using doubly dimensioned coord arrays (column
+      dominant, as per normal C 2d arrays)
+    "
+HREF="pltr2.html"><LINK
+REL="NEXT"
+TITLE="
+      plcon1: Contour plot, general 1-d mapping for
+fortran
+    "
+HREF="plcon1.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>The PLplot Plotting Library: Programmer's Reference Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="pltr2.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="plcon1.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="API-FORTRAN"
+></A
+>Chapter 18. The Specialized Fortran API for PLplot</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="api-fortran.html#plcon0"
+><CODE
+CLASS="function"
+>plcon0</CODE
+>: Contour plot, identity mapping for fortran</A
+></DT
+><DT
+><A
+HREF="plcon1.html"
+><CODE
+CLASS="function"
+>plcon1</CODE
+>: Contour plot, general 1-d mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plcon2.html"
+><CODE
+CLASS="function"
+>plcon2</CODE
+>: Contour plot, general 2-d mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plcontfortran.html"
+><CODE
+CLASS="function"
+>plcont</CODE
+>: Contour plot, fixed linear mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plvec0.html"
+><CODE
+CLASS="function"
+>plvec0</CODE
+>: Vector plot, identity mapping for fortran</A
+></DT
+><DT
+><A
+HREF="plvec1.html"
+><CODE
+CLASS="function"
+>plvec1</CODE
+>: Vector plot, general 1-d mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plvec2.html"
+><CODE
+CLASS="function"
+>plvec2</CODE
+>: Vector plot, general 2-d mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plvectfortran.html"
+><CODE
+CLASS="function"
+>plvect</CODE
+>: Vector plot, fixed linear mapping for
+fortran</A
+></DT
+><DT
+><A
+HREF="plmeshfortran.html"
+><CODE
+CLASS="function"
+>plmesh</CODE
+>: Plot surface mesh for fortran</A
+></DT
+><DT
+><A
+HREF="plot3dfortran.html"
+><CODE
+CLASS="function"
+>plot3d</CODE
+>: Plot 3-d surface plot for fortran</A
+></DT
+><DT
+><A
+HREF="plparseoptsfortran.html"
+><CODE
+CLASS="function"
+>plparseopts</CODE
+>: parse arguments for fortran</A
+></DT
+><DT
+><A
+HREF="plsescfortran.html"
+><CODE
+CLASS="function"
+>plsesc</CODE
+>: Set the escape character for text strings
+for fortran</A
+></DT
+></DL
+></DIV
+><P
+>  The purpose of this Chapter is to document the API for each Fortran function
+  in PLplot that differs substantially (usually in argument lists)
+  from the common API that has already been
+  documented in <A
+HREF="api.html"
+>Chapter 16</A
+>.
+  </P
+><P
+>  Normally, the common API is wrapped in such a way for Fortran that there is
+  and one-to-one correspondence between each fortran and C argument
+  (see <A
+HREF="fortran.html"
+>Chapter 8</A
+>
+  for discussion).  However, for certain routines documented in this
+  chapter the fortran argument lists
+  necessarily differ substantially from the C versions.
+  </P
+><P
+>  This chapter is incomplete and NEEDS DOCUMENTATION of, e.g., the fortran
+  equivalent of the plshade C routines.
+  </P
+><DIV
+CLASS="sect1"
+><H3
+CLASS="sect1"
+><A
+NAME="plcon0"
+><CODE
+CLASS="function"
+>plcon0</CODE
+>: Contour plot, identity mapping for fortran</A
+></H3
+><P
+>      <DIV
+CLASS="funcsynopsis"
+><P
+></P
+><A
+NAME="AEN10505"
+></A
+><TABLE
+CLASS="funcprototype"
+><TR
+><TD
+><CODE
+CLASS="FUNCDEF"
+>	  plcon0
+	</CODE
+>(z, nx, ny, kx, lx, ky, ly, clevel, nlevel);</TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+>
+    </P
+><P
+>      Draws a contour plot of the data in
+      <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>z</CODE
+>[<CODE
+CLASS="parameter"
+>nx</CODE
+>][<CODE
+CLASS="parameter"
+>ny</CODE
+>]</TT
+>,
+      using the <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>nlevel</CODE
+></TT
+> contour
+      levels specified by <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>clevel</CODE
+></TT
+>.
+      Only the region of the array from
+      <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>kx</CODE
+></TT
+> to
+      <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>lx</CODE
+></TT
+> and from
+      <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>ky</CODE
+></TT
+> to
+      <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>ly</CODE
+></TT
+> is plotted out.  See
+      <A
+HREF="contour-plots.html"
+>the Section called <I
+>Contour and Shade Plots</I
+> in Chapter 3</A
+> for more information.
+    </P
+><TABLE
+CLASS="variablelist"
+><TR
+><TD
+><DL
+><DT
+><CODE
+CLASS="parameter"
+>z</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLFLT **</TT
+>, input)</DT
+><DD
+><P
+>	    Pointer to a vectored two-dimensional array containing data to
+	    be contoured.
+	  </P
+></DD
+><DT
+><CODE
+CLASS="parameter"
+>nx, ny</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLINT</TT
+>, input)</DT
+><DD
+><P
+>	    Physical dimensions of array
+	    <TT
+CLASS="literal"
+><CODE
+CLASS="parameter"
+>z</CODE
+></TT
+>.
+	  </P
+></DD
+><DT
+><CODE
+CLASS="parameter"
+>kx, lx</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLINT</TT
+>, input)</DT
+><DD
+><P
+>	    Range of <TT
+CLASS="literal"
+>x</TT
+> indices to consider.
+	  </P
+></DD
+><DT
+><CODE
+CLASS="parameter"
+>ky, ly</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLINT</TT
+>, input)</DT
+><DD
+><P
+>	    Range of <TT
+CLASS="literal"
+>y</TT
+> indices to consider.
+	  </P
+></DD
+><DT
+><CODE
+CLASS="parameter"
+>clevel</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLFLT *</TT
+>, input)</DT
+><DD
+><P
+>	    Pointer to array specifying levels at which to draw contours.
+	  </P
+></DD
+><DT
+><CODE
+CLASS="parameter"
+>nlevel</CODE
+>
+	  (<TT
+CLASS="literal"
+>PLINT</TT
+>, input)</DT
+><DD
+><P
+>	    Number of contour levels to draw.
+	  </P
+></DD
+></DL
+></TD
+></TR
+></TABLE
+><P
+>      NOTE: this function is intended for use from a Fortran caller only.
+      The C user should instead call <A
+HREF="plcont.html"
+><CODE
+CLASS="function"
+>plcont</CODE
+></A
+> using the built-in
+      transformation function <CODE
+CLASS="function"
+>pltr0</CODE
+> for the same
+      capability.
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pltr2.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="plcon1.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><CODE
+CLASS="function"
+>pltr2</CODE
+>: Linear interpolation for grid to world
+      mapping using doubly dimensioned coord arrays (column
+      dominant, as per normal C 2d arrays)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="p3208.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><CODE
+CLASS="function"
+>plcon1</CODE
+>: Contour plot, general 1-d mapping for
+fortran</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
