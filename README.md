@@ -6,7 +6,7 @@ This document describes how to link the `plplot` and `myimsl` libraries into you
 
 `plplot` is a scientific plotting package which can be used to create standard x-y plots, semi-log plots, log-log plots, contour plots, 3D surface plots, mesh plots, bar charts and pie charts. The `plplot` package is distributable under the terms of the GNU Library General Public License (LGPL) with some exceptions. For more information about "Copyright" and "on-line manual", please see the home page (http://plplot.sourceforge.net).
 
-`myimsl` is a small-sized package solving specialized problems which is coded and distributed by Professor Gang-Gyoo Jin of Korea Maritime University in Busan, South Korea. The `myimsl` library contains modules for eigenvalues, polynomial roots, sort, norms, FFT, cubic spline, ODEs, real-coded genetic algorithm (RCGA), symbolic-coded genetic algorithm (SCGA), Simulated Annealing, fuzzy control, etc. `myimsl` includes the new vector and matrix classes coded by Alexander Volya (http://www.nscl.msu.edu/~volya/alexander/) for easy manipulation of real and complex vectors and matrices.
+`myimsl` is a small-sized package solving specialized problems which is coded and distributed by **Professor Gang-Gyoo Jin** of Korea Maritime University in Busan, South Korea. The `myimsl` library contains modules for eigenvalues, polynomial roots, sort, norms, FFT, cubic spline, ODEs, real-coded genetic algorithm (RCGA), symbolic-coded genetic algorithm (SCGA), Simulated Annealing, fuzzy control, etc. `myimsl` includes the new vector and matrix classes coded by **Alexander Volya** (http://www.nscl.msu.edu/~volya/alexander/) for easy manipulation of real and complex vectors and matrices.
 
 ## Contents of `plplot.zip` and `myimsl.zip`
 
